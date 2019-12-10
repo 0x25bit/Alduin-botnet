@@ -1,0 +1,8 @@
+E:\project\wallit\WallIT\WallIT.Shared\bin\Debug\netstandard2.0\WallIT.Shared.deps.json
+E:\project\wallit\WallIT\WallIT.Shared\bin\Debug\netstandard2.0\WallIT.Shared.dll
+E:\project\wallit\WallIT\WallIT.Shared\bin\Debug\netstandard2.0\WallIT.Shared.pdb
+E:\project\wallit\WallIT\WallIT.Shared\obj\Debug\netstandard2.0\WallIT.Shared.csprojAssemblyReference.cache
+E:\project\wallit\WallIT\WallIT.Shared\obj\Debug\netstandard2.0\WallIT.Shared.AssemblyInfoInputs.cache
+E:\project\wallit\WallIT\WallIT.Shared\obj\Debug\netstandard2.0\WallIT.Shared.AssemblyInfo.cs
+E:\project\wallit\WallIT\WallIT.Shared\obj\Debug\netstandard2.0\WallIT.Shared.dll
+E:\project\wallit\WallIT\WallIT.Shared\obj\Debug\netstandard2.0\WallIT.Shared.pdb

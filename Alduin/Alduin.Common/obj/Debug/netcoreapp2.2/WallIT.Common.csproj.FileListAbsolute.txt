@@ -1,0 +1,12 @@
+E:\project\wallit\WallIT\WallIT.Common\bin\Debug\netcoreapp2.2\WallIT.Common.deps.json
+E:\project\wallit\WallIT\WallIT.Common\bin\Debug\netcoreapp2.2\WallIT.Common.dll
+E:\project\wallit\WallIT\WallIT.Common\bin\Debug\netcoreapp2.2\WallIT.Common.pdb
+E:\project\wallit\WallIT\WallIT.Common\obj\Debug\netcoreapp2.2\WallIT.Common.AssemblyInfoInputs.cache
+E:\project\wallit\WallIT\WallIT.Common\obj\Debug\netcoreapp2.2\WallIT.Common.AssemblyInfo.cs
+E:\project\wallit\WallIT\WallIT.Common\obj\Debug\netcoreapp2.2\WallIT.Common.dll
+E:\project\wallit\WallIT\WallIT.Common\obj\Debug\netcoreapp2.2\WallIT.Common.pdb
+E:\project\wallit\WallIT\WallIT.Common\bin\Debug\netcoreapp2.2\WallIT.Shared.dll
+E:\project\wallit\WallIT\WallIT.Common\bin\Debug\netcoreapp2.2\WallIT.Shared.pdb
+E:\project\wallit\WallIT\WallIT.Common\bin\Debug\netcoreapp2.2\hu-HU\WallIT.Shared.resources.dll
+E:\project\wallit\WallIT\WallIT.Common\obj\Debug\netcoreapp2.2\WallIT.Common.csprojAssemblyReference.cache
+E:\project\wallit\WallIT\WallIT.Common\obj\Debug\netcoreapp2.2\WallIT.Common.csproj.CopyComplete

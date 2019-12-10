@@ -1,0 +1,15 @@
+E:\project\wallit\WallIT\WallIT.Logic\bin\Debug\netstandard2.0\WallIT.Logic.deps.json
+E:\project\wallit\WallIT\WallIT.Logic\bin\Debug\netstandard2.0\WallIT.Logic.dll
+E:\project\wallit\WallIT\WallIT.Logic\bin\Debug\netstandard2.0\WallIT.Logic.pdb
+E:\project\wallit\WallIT\WallIT.Logic\bin\Debug\netstandard2.0\WallIT.Common.dll
+E:\project\wallit\WallIT\WallIT.Logic\bin\Debug\netstandard2.0\WallIT.DataAccess.dll
+E:\project\wallit\WallIT\WallIT.Logic\bin\Debug\netstandard2.0\WallIT.Shared.dll
+E:\project\wallit\WallIT\WallIT.Logic\bin\Debug\netstandard2.0\WallIT.DataAccess.pdb
+E:\project\wallit\WallIT\WallIT.Logic\bin\Debug\netstandard2.0\WallIT.Shared.pdb
+E:\project\wallit\WallIT\WallIT.Logic\bin\Debug\netstandard2.0\WallIT.Common.pdb
+E:\project\wallit\WallIT\WallIT.Logic\obj\Debug\netstandard2.0\WallIT.Logic.csprojAssemblyReference.cache
+E:\project\wallit\WallIT\WallIT.Logic\obj\Debug\netstandard2.0\WallIT.Logic.AssemblyInfoInputs.cache
+E:\project\wallit\WallIT\WallIT.Logic\obj\Debug\netstandard2.0\WallIT.Logic.AssemblyInfo.cs
+E:\project\wallit\WallIT\WallIT.Logic\obj\Debug\netstandard2.0\WallIT.Logic.csproj.CopyComplete
+E:\project\wallit\WallIT\WallIT.Logic\obj\Debug\netstandard2.0\WallIT.Logic.dll
+E:\project\wallit\WallIT\WallIT.Logic\obj\Debug\netstandard2.0\WallIT.Logic.pdb

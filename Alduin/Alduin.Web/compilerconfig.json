@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/themes/mkik/bootstrap.css",
+    "inputFile": "wwwroot/lib/bootstrap-mkik-src/scss/bootstrap.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/themes/mkik/app.css",
+    "inputFile": "wwwroot/lib/bootstrap-mkik-src/scss/app/app.scss"
+  },
+  {
+    "outputFile": "wwwroot/lib/bootstrap-mkik-src/scss/app/_card.css",
+    "inputFile": "wwwroot/lib/bootstrap-mkik-src/scss/app/_card.scss"
+  },
+  {
+    "outputFile": "wwwroot/lib/wallit/scss/app/app.css",
+    "inputFile": "wwwroot/lib/wallit/scss/app/app.scss"
+  }
+]

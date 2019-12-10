@@ -1,0 +1,14 @@
+E:\project\wallit\WallIT\WallIT.DataAccess\bin\Debug\netcoreapp2.2\WallIT.DataAccess.deps.json
+E:\project\wallit\WallIT\WallIT.DataAccess\bin\Debug\netcoreapp2.2\WallIT.DataAccess.dll
+E:\project\wallit\WallIT\WallIT.DataAccess\bin\Debug\netcoreapp2.2\WallIT.DataAccess.pdb
+E:\project\wallit\WallIT\WallIT.DataAccess\bin\Debug\netcoreapp2.2\WallIT.Common.dll
+E:\project\wallit\WallIT\WallIT.DataAccess\bin\Debug\netcoreapp2.2\WallIT.Shared.dll
+E:\project\wallit\WallIT\WallIT.DataAccess\bin\Debug\netcoreapp2.2\WallIT.Common.pdb
+E:\project\wallit\WallIT\WallIT.DataAccess\bin\Debug\netcoreapp2.2\WallIT.Shared.pdb
+E:\project\wallit\WallIT\WallIT.DataAccess\obj\Debug\netcoreapp2.2\WallIT.DataAccess.csprojAssemblyReference.cache
+E:\project\wallit\WallIT\WallIT.DataAccess\obj\Debug\netcoreapp2.2\WallIT.DataAccess.AssemblyInfoInputs.cache
+E:\project\wallit\WallIT\WallIT.DataAccess\obj\Debug\netcoreapp2.2\WallIT.DataAccess.AssemblyInfo.cs
+E:\project\wallit\WallIT\WallIT.DataAccess\obj\Debug\netcoreapp2.2\WallIT.DataAccess.csproj.CopyComplete
+E:\project\wallit\WallIT\WallIT.DataAccess\obj\Debug\netcoreapp2.2\WallIT.DataAccess.dll
+E:\project\wallit\WallIT\WallIT.DataAccess\obj\Debug\netcoreapp2.2\WallIT.DataAccess.pdb
+E:\project\wallit\WallIT\WallIT.DataAccess\bin\Debug\netcoreapp2.2\hu-HU\WallIT.Shared.resources.dll
