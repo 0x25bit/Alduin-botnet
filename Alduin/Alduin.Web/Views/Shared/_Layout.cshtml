@@ -1,12 +1,13 @@
 ﻿@using Alduin.Logic.Identity
 @inject AppSignInManager SignInManager
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Web2</title>
+    <title>
+        @ViewData["Title"] - Alduin
+    </title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -18,37 +19,49 @@
               crossorigin="anonymous"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
-    <link rel="stylesheet" href="~/lib/wallit/scss/app/app.min.css" />
-    <link rel="stylesheet" href="~/css/site.min.css" />
+    <link rel="stylesheet" href="~/lib/styles/scss/app/app.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/6096ca5492.js"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Web2</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        @if (SignInManager.IsSignedIn(User))
-                        {
-                            <li>
-                                Hi, @User.Identity.Name
-                            </li>
-                        }
-                    </ul>
+        <div class="header-menu">
+            <div class="row align-items-center">
+                <div class="col-4 float-left">
+
+                </div>
+                <div class="col-4 align-middle text-center">
+                    <span class="h3">Alduin</span>
+                </div>
+                <div class="col-4 text-lg-right">
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                    <span class="p-2">
+                        @Localizer["Hi"], @User.Identity.Name
+                    </span>
+                    }
                 </div>
             </div>
-        </nav>
+        </div>
+        <div class="menu-container">
+            <div class="container">
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <div class="row mt-3"><a href="#" class="menu-row w-100"><span class="col-sm-4"><i class="fas fa-list h6"></i></span><span class="col-sm-8 p-1">@Localizer["List"]</span></a></div>
+                    <div class="row mt-3"><a href="#" class="menu-row w-100"><span class="col-sm-4"><i class="fas fa-terminal h6"></i></span><span class="col-sm-8 p-1">@Localizer["Commands"]</span></a></div>
+                    <div class="row mt-3"><a href="#" class="menu-row w-100"><span class="col-sm-4"><i class="fas fa-stream h6"></i></span><span class="col-sm-8 p-1">@Localizer["Streams"]</span></a></div>
+                    <div class="row mt-3"><a href="#" class="menu-row w-100"><span class="col-sm-4"><i class="fas fa-envelope-open-text h6"></i></span><span class="col-sm-8 p-1">@Localizer["Invitation"]</span></a></div>
+                    <div class="row mt-3 "><a href="#" class="menu-row w-100"><span class="col-sm-4"><i class="fas fa-users-cog h6"></i></span><span class="col-sm-8 p-1">@Localizer["User settings"]</span></a></div>
+                    <div class="row mt-3"><a href="/UserAccount/Logout" class="menu-row w-100"><span class="col-sm-4"><i class="fas fa-sign-out-alt h6"></i></span><span class="col-sm-8 p-1">@Localizer["Quit"]</span></a></div>
+                }
+                else
+                {
+                    <div class="row mt-3"><a href="/UserAccount/" class="menu-row w-100"><span class="col-sm-4"><i class="fas fa-list h6"></i></span><span class="col-sm-8 p-1">@ViewData["Login"]</span></a></div>
+                }
+            </div>
+        </div>
     </header>
+
     <div class="container">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">
@@ -56,11 +69,13 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer">
         <div class="container">
-            &copy; 2019 - Web2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="row">
+                <div class="col-3">&copy; 2019 - Alduin - <a asp-area="" asp-controller="Home" asp-action="Privacy">@Localizer["Privacy"]</a></div>
+                <div class="col-3"><partial name="_SelectLanguagePartial" /></div>
+            </div>
         </div>
-        <partial name="_SelectLanguagePartial" />
     </footer>
 
     <environment include="Development">

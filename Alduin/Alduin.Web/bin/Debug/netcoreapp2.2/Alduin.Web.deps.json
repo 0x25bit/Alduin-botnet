@@ -24,7 +24,6 @@
     ".NETCoreApp,Version=v2.2": {
       "Alduin.Web/1.0.0": {
         "dependencies": {
-          "Alduin.DataAccess": "1.0.0",
           "Alduin.Logic": "1.0.0",
           "BuildBundlerMinifier": "3.2.435",
           "FluentValidation": "8.5.1",
@@ -646,7 +645,7 @@
       "System.ValueTuple/4.5.0": {},
       "Alduin.Common/1.0.0": {
         "dependencies": {
-          "AutoMapper": "9.0.0"
+          "Alduin.Shared": "1.0.0"
         },
         "runtime": {
           "Alduin.Common.dll": {}

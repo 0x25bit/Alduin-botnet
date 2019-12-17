@@ -21,7 +21,7 @@
     {
       "provider": "unpkg",
       "library": "bootstrap@4.3.1",
-      "destination": "wwwroot/lib/wallit/",
+      "destination": "wwwroot/lib/Alduin/",
       "files": [
         "scss/mixins/_alert.scss",
         "scss/mixins/_background-variant.scss",

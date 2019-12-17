@@ -1,0 +1,116 @@
+@import "mixins";
+@import "variables";
+@import "media";
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+$text-color: #B4B5B7;
+$menu-bg-color: #272A31;
+$menu-bd-color: #131418;
+$active-color: #15A0BF;
+$body-bg-color: #1C1E23;
+$menu-hv-color: rgba(21, 159, 190, 0.5);
+$font-family: 'Roboto', sans-serif;
+
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+
+html {
+    position: relative;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+body {
+    font-family: $font-family; 
+    color: $text-color;
+    background-color: $body-bg-color;
+    margin-bottom: 60px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer {
+    border-top: 1px solid $menu-bd-color;
+    position: absolute;
+    max-height: 50px;
+    bottom: 0;
+    width: 100%;
+    line-height: 60px;
+}
+
+.menu-container {
+    position: fixed;
+    height: 500px;
+    width: 200px;
+    z-index: 2;
+    background-color: $menu-bg-color;
+    border: 1px solid $menu-bd-color;
+    overflow: hidden;
+    a {
+        text-decoration: none;
+        color: $text-color;
+        &:hover {
+            color: $text-color;
+        }
+    }
+}
+.menu-row {
+    transition: .3s;
+
+    &:hover {
+        background-color: $menu-hv-color;
+    }
+}
+.header-menu {
+    width: 100%;
+    background-color: $menu-bg-color;
+    border-bottom: 1px solid $menu-bd-color;
+}
+
+.select-language {
+    background-color: $menu-bg-color;
+    color: $text-color;
+    border-radius: 5px;
+}
+.active{
+  color: $active-color;
+}
+.logo {
+    width: 10%;
+}
+.auth-form {
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    border: 1px solid $menu-bd-color;
+    background-color: $menu-bg-color;
+
+    input {
+        border: none;
+        border-radius: 0px;
+        background-color: $body-bg-color;
+        color: white;
+        width: 100%;
+        padding: 5px;
+    }
+}
+.form-check {
+    background-color: $body-bg-color;
+    padding: 5px;
+    text-align: center;
+
+    .form-check-input {
+        margin-left: 5px;
+    }
+}

@@ -51,7 +51,7 @@ namespace Alduin.Web
                 opt.Password.RequireUppercase = false;
                 opt.Password.RequireNonAlphanumeric = false;
 
-                opt.Lockout.AllowedForNewUsers = true;
+                opt.Lockout.AllowedForNewUsers = false;
                 opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromHours(1);
                 opt.Lockout.MaxFailedAccessAttempts = 5;
             });
@@ -119,7 +119,7 @@ namespace Alduin.Web
                 opt.SupportedUICultures = supportedCultures;
             });
 
-            services.AddMediatR(typeof(GetUserByIdQueryHandler)); // handlers are stored in the WallIT.Logic assembly
+            services.AddMediatR(typeof(GetUserByIdQueryHandler)); // handlers are stored in the Alduin.Logic assembly
 
             services.AddAutoMapper(cfg => SetupAutoMapperConfiguration(cfg), GetAutoMapperProfileAssemblies());
         }
@@ -155,7 +155,7 @@ namespace Alduin.Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=UserAccount}/{action=Index}/{id?}");
             });
         }
 

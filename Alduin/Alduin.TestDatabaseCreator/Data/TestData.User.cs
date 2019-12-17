@@ -13,7 +13,7 @@ namespace Alduin.TestDatabaseCreator.Data
             {
                 Name = "Test User",
                 Email = "user@test.com",
-                UserName = "user@test.com",
+                UserName = "Teszt",
                 NormalizedUserName = "USER@TEST.COM",
                 PasswordHash = "AQAAAAEAACcQAAAAEEwE0nJJF+kuPBI1Qhn99jS0aLcxbDmWLdpUfWO/h31PVOCeUlW2n4z4Mnkp80fcdw==", // 12345
                 SecurityStamp = "Y2HA3UVELZRLEOJ4L7TO5MRFGX5WLRBI",
@@ -27,7 +27,7 @@ namespace Alduin.TestDatabaseCreator.Data
             {
                 Name = "Test Admin",
                 Email = "admin@test.com",
-                UserName = "admin@test.com",
+                UserName = "Teszt",
                 NormalizedUserName = "ADMIN@TEST.COM",
                 PasswordHash = "AQAAAAEAACcQAAAAEEwE0nJJF+kuPBI1Qhn99jS0aLcxbDmWLdpUfWO/h31PVOCeUlW2n4z4Mnkp80fcdw==", // 12345
                 SecurityStamp = "Y2HA3UVELZRLEOJ4L7TO5MRFGX5WLRBI",
@@ -36,7 +36,7 @@ namespace Alduin.TestDatabaseCreator.Data
                 IsDeleted = false
             };
             InsertEntity(user2);
-
+            
             // UserClaims
             var user1Claims = new[]
             {

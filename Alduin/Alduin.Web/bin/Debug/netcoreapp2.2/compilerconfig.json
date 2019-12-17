@@ -12,7 +12,11 @@
     "inputFile": "wwwroot/lib/bootstrap-mkik-src/scss/app/_card.scss"
   },
   {
-    "outputFile": "wwwroot/lib/wallit/scss/app/app.css",
-    "inputFile": "wwwroot/lib/wallit/scss/app/app.scss"
+    "outputFile": "wwwroot/lib/Alduin/scss/app/app.css",
+    "inputFile": "wwwroot/lib/Alduin/scss/app/app.scss"
+  },
+  {
+    "outputFile": "wwwroot/lib/styles/scss/app/app.css",
+    "inputFile": "wwwroot/lib/styles/scss/app/app.scss"
   }
 ]

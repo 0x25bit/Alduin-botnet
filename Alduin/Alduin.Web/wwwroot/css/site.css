@@ -1,31 +1,10 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿.menu-container > a {
+  text-decoration: none;
+  color: #B4B5B7;
 }
-
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+.menu-container > a:hover{
+  color: #B4B5B7;
 }
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
 html {
   font-size: 14px;
 }
@@ -33,17 +12,6 @@ html {
   html {
     font-size: 16px;
   }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
@@ -56,20 +24,54 @@ button.accept-policy {
 html {
   position: relative;
   min-height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  /* Margin bottom by footer height */
+  color: #B4B5B7;
+  background-color: #1C1E23;
   margin-bottom: 60px;
+  padding: 0;
+  margin: 0;
 }
 .footer {
+  border-top: 1px solid #131418;
   position: absolute;
+  max-height: 50px;
   bottom: 0;
   width: 100%;
-  white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
-
-.test {
-    display: none;
+.menu-container{
+  position: fixed;
+  height: 500px;
+  width: 200px;
+  z-index: 2;
+  background-color: #272A31;
+  border: 1px solid #131418;
+}
+.menu-row{
+  margin: 20px 0px;
+  padding: 0px 10px;
+  line-height: 1.5em;
+}
+.menu-row:hover{
+  background-color: rgba(21, 159, 190, 0.5);
+}
+.header-menu{
+  width: 100%;
+  background-color: #272A31;
+  border-bottom: 1px solid #131418;
+}
+.select-language{
+  background-color: #272A31;
+  color: #B4B5B7;
+  border-radius: 5px;
+}
+/*.active{
+  color: #15A0BF;
+}*/
+.logo{
+    width: 10%;
 }

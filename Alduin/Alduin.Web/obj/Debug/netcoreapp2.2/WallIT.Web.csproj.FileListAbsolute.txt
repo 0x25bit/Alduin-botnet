@@ -52,15 +52,3 @@ E:\project\wallit\WallIT\WallIT.Web\bin\Debug\netcoreapp2.2\hu-HU\WallIT.Shared.
 E:\project\wallit\WallIT\WallIT.Web\obj\Debug\netcoreapp2.2\hu-HU\WallIT.Web.resources.dll
 E:\project\wallit\WallIT\WallIT.Web\obj\Debug\netcoreapp2.2\Razor\Views\Account\Details.cshtml.g.cs
 E:\project\wallit\WallIT\WallIT.Web\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_SelectLanguagePartial.cshtml.g.cs
-E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\WallIT.Web.csprojAssemblyReference.cache
-E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\WallIT.Web.Resources.Controllers.HomeController.hu-HU.resources
-E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\WallIT.Web.Resources.Controllers.UserAccountController.hu-HU.resources
-E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\WallIT.Web.Resources.Models.LoginModel.hu-HU.resources
-E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\WallIT.Web.Resources.SharedResource.hu-HU.resources
-E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\WallIT.Web.csproj.GenerateResource.cache
-E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\WallIT.Web.RazorAssemblyInfo.cache
-E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\WallIT.Web.RazorAssemblyInfo.cs
-E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\WallIT.Web.AssemblyInfoInputs.cache
-E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\WallIT.Web.AssemblyInfo.cs
-E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\WallIT.Web.dll
-E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\WallIT.Web.pdb

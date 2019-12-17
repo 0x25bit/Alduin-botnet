@@ -834,7 +834,7 @@
       "System.ValueTuple/4.5.0": {},
       "Alduin.Common/1.0.0": {
         "dependencies": {
-          "AutoMapper": "9.0.0"
+          "Alduin.Shared": "1.0.0"
         },
         "runtime": {
           "Alduin.Common.dll": {}

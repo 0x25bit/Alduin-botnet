@@ -1337,7 +1337,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "AutoMapper": "9.0.0"
+          "Alduin.Shared": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Alduin.Common.dll": {}

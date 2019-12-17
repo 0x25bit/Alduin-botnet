@@ -1,5 +1,4 @@
-﻿using Alduin.DataAccess.Entities.Base;
-using FluentNHibernate.Automapping;
+﻿using FluentNHibernate.Automapping;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate.Cfg;

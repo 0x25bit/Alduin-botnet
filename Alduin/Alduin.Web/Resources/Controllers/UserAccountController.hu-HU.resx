@@ -117,10 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="E-mail is required!" xml:space="preserve">
+    <value>E-mail cím kötelező!</value>
+  </data>
   <data name="E-mail or password is incorrect!" xml:space="preserve">
     <value>Az e-mail vagy jelszó helytelen!</value>
   </data>
+  <data name="Format is incorrect!" xml:space="preserve">
+    <value>Formátum nem helyes!</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Bejelentkezés</value>
+  </data>
+  <data name="Password is required!" xml:space="preserve">
+    <value>Jelszó kötelező!</value>
+  </data>
+  <data name="Registration" xml:space="preserve">
+    <value>Regisztráció</value>
   </data>
 </root>

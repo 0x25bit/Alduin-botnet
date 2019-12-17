@@ -29,7 +29,11 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\project\\Alduin-botnet\\Alduin\\WallIT.Logic\\WallIT.Logic.csproj": {
+                "projectPath": "E:\\project\\Alduin-botnet\\Alduin\\WallIT.Logic\\WallIT.Logic.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

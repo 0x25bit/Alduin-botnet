@@ -17,8 +17,12 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\Alduin.DataAccess\Alduin.DataAccess.csproj" />
     <ProjectReference Include="..\Alduin.Logic\Alduin.Logic.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
 </Project>

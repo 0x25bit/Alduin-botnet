@@ -1,4 +1,3 @@
-using Alduin.Web.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
@@ -30,7 +29,7 @@ namespace Alduin.Web.Controllers
         {
             var title = _localizer["Login"];
             SetTitle(title);
-
+            ViewData["Login"] = title;
             var model = new LoginModel
             {
                 ReturnUrl = returnUrl ?? Url.Content("~/")
@@ -42,8 +41,9 @@ namespace Alduin.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginModel model)
         {
-            SetTitle("Login");
-
+            var title = _localizer["Login"];
+            SetTitle(title);
+            ViewData["Login"] = title;
             if (!ModelState.IsValid)
                 return View(model);
 
@@ -62,7 +62,6 @@ namespace Alduin.Web.Controllers
 
                 return View(model);
             }
-
             return LocalRedirect(model.ReturnUrl ?? "");
         }
 
@@ -88,6 +87,9 @@ namespace Alduin.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Register()
         {
+            var title = _localizer["Registration"];
+            SetTitle(title);
+            ViewData["Registration"] = title;
             SetTitle("Registration");
             await FillIdentityOptionsViewBag();
 
@@ -107,6 +109,7 @@ namespace Alduin.Web.Controllers
             var registerCommand = new RegisterCommand
             {
                 User = model.User,
+                Email = model.Email,
                 Password = model.Password
             };
             var result = await _mediator.Send(registerCommand);

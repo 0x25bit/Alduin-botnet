@@ -1,6 +1,4 @@
-﻿using Alduin.Logic.Interfaces.Repositories;
-using Alduin.Shared.Enums;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -10,7 +8,8 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading;
 using System.Threading.Tasks;
-
+using Alduin.Logic.Interfaces.Repositories;
+using Alduin.Shared.Enums;
 
 namespace Alduin.Logic.Identity
 {

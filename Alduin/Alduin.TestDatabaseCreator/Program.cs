@@ -24,7 +24,7 @@ namespace Alduin.TestDataBaseCreator
             try
             {
                 BuildConfig();
-                _connectionString = _config.GetConnectionString("Alduin");
+                _connectionString = _config.GetConnectionString("ConnectDataBase");
 
                 Console.WriteLine("Recreating database...");
                 RunRecreateScript();
@@ -79,10 +79,10 @@ namespace Alduin.TestDataBaseCreator
             {
                 TestData.session = session;
 
-                TestData.CreateCreditCards();
-                TestData.CreateUsers();
-                TestData.CreateAccounts();
 
+                TestData.CreateUsers();
+                TestData.CreateBots();
+                TestData.CreateInvitation();
                 trans.Commit();
             }
             Console.ForegroundColor = ConsoleColor.White;

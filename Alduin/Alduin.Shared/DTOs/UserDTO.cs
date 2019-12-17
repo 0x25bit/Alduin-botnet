@@ -1,5 +1,5 @@
-﻿using Alduin.Shared.DTOs.Base;
-using System;
+﻿using System;
+using Alduin.Shared.DTOs.Base;
 
 namespace Alduin.Shared.DTOs
 {

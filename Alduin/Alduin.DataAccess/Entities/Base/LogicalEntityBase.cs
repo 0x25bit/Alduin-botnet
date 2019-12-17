@@ -1,5 +1,4 @@
-﻿using Alduin.DataAccess.Entities.Base;
-using System;
+﻿using System;
 using Alduin.Common.Interfaces;
 
 namespace Alduin.DataAccess.Entities.Base

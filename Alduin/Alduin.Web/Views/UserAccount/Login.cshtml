@@ -3,30 +3,38 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+<div class="container d-flex justify-content-center">
+    <div class="row">
+        <div class="col-12">
+            
+            <form asp-controller="UserAccount" class="auth-form" asp-action="Login" method="post">
+                <h2>@ViewData["Login"]</h2>
+                <hr />
 
-<form asp-controller="UserAccount" asp-action="Login" method="post">
-    <input type="hidden" asp-for="ReturnUrl" />
+                <input type="hidden" asp-for="ReturnUrl" />
 
-    <div asp-validation-summary="ModelOnly"></div>
+                <div asp-validation-summary="ModelOnly"></div>
 
-    <div class="form-group">
-        <label asp-for="Email"></label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email"></span>
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" />
+                    <span asp-validation-for="Email"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" />
+                    <span asp-validation-for="Password"></span>
+                </div>
+
+                <div class="form-check">
+                    <span asp-validation-for="RememberMe"></span>
+                    <input asp-for="RememberMe" class="form-check-input">
+                    <label class="form-check-label" asp-for="RememberMe">Remember me</label>
+                </div>
+
+                <button class="btn btn-primary mt-2 w-100">@ViewData["Login"]</button>
+            </form>
+        </div>
     </div>
-
-    <div class="form-group">
-        <label asp-for="Password"></label>
-        <input asp-for="Password" class="form-control" />
-        <span asp-validation-for="Password"></span>
-    </div>
-
-    <div class="form-group">
-        <input asp-for="RememberMe" class="form-control" />
-        <label asp-for="RememberMe"></label>
-        <span asp-validation-for="RememberMe"></span>
-    </div>
-
-    <button class="btn btn-primary">Login</button>
-
-</form>
+</div>

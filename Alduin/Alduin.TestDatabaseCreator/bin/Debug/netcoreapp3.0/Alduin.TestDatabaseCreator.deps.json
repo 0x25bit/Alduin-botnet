@@ -9,12 +9,10 @@
       "Alduin.TestDatabaseCreator/1.0.0": {
         "dependencies": {
           "Alduin.DataAccess": "1.0.0",
-          "Alduin.Shared": "1.0.0",
           "Microsoft.Extensions.Configuration": "3.0.1",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "3.0.1",
           "Microsoft.Extensions.Configuration.FileExtensions": "3.0.1",
-          "Microsoft.Extensions.Configuration.Json": "3.0.1",
-          "NHibernate": "5.2.6"
+          "Microsoft.Extensions.Configuration.Json": "3.0.1"
         },
         "runtime": {
           "Alduin.TestDatabaseCreator.dll": {}
@@ -28,18 +26,6 @@
           "lib/netstandard1.1/Antlr3.Runtime.dll": {
             "assemblyVersion": "3.5.0.2",
             "fileVersion": "3.5.1.0"
-          }
-        }
-      },
-      "AutoMapper/9.0.0": {
-        "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
-          "System.Reflection.Emit": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/AutoMapper.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.0.0"
           }
         }
       },
@@ -66,7 +52,6 @@
           }
         }
       },
-      "Microsoft.CSharp/4.5.0": {},
       "Microsoft.Extensions.Configuration/3.0.1": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "3.0.1"
@@ -958,7 +943,7 @@
       },
       "Alduin.Common/1.0.0": {
         "dependencies": {
-          "AutoMapper": "9.0.0"
+          "Alduin.Shared": "1.0.0"
         },
         "runtime": {
           "Alduin.Common.dll": {}
@@ -1004,13 +989,6 @@
       "path": "antlr3.runtime/3.5.1",
       "hashPath": "antlr3.runtime.3.5.1.nupkg.sha512"
     },
-    "AutoMapper/9.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-xCqvoxT4HIrNY/xlXG9W+BA/awdrhWvMTKTK/igkGSRbhOhpl3Q8O8Gxlhzjc9JsYqE7sS6AxgyuUUvZ6R5/Bw==",
-      "path": "automapper/9.0.0",
-      "hashPath": "automapper.9.0.0.nupkg.sha512"
-    },
     "FluentNHibernate/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -1024,13 +1002,6 @@
       "sha512": "sha512-jlebSjv2a7amYfKXEUsPDSf2Yi9r0/FkvvT6Dy7ehl7z8du+dTGqKDu+fYbnE+WuIz/v3prYm1jpBljMrY1p+Q==",
       "path": "iesi.collections/4.0.4",
       "hashPath": "iesi.collections.4.0.4.nupkg.sha512"
-    },
-    "Microsoft.CSharp/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
-      "path": "microsoft.csharp/4.5.0",
-      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/3.0.1": {
       "type": "package",

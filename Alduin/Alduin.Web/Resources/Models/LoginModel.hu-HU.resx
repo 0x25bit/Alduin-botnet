@@ -118,12 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="E-mail" xml:space="preserve">
-    <value>E-mail cím</value>
+    <value>Email cím</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Jelszó</value>
   </data>
   <data name="Remember me" xml:space="preserve">
-    <value>Jegyezzen meg</value>
+    <value>Emlékez rám</value>
   </data>
 </root>

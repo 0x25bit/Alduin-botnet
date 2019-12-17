@@ -1,12 +1,11 @@
-﻿using Alduin.Logic.Interfaces.Managers;
-using Alduin.Logic.Interfaces.Repositories;
-using Alduin.Web.Models;
-using FluentValidation;
+﻿using FluentValidation;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NHibernate;
 using Alduin.DataAccess.SessionBuilder;
 using Alduin.Logic.Identity;
+using Alduin.Logic.Interfaces.Managers;
+using Alduin.Logic.Interfaces.Repositories;
 using Alduin.Logic.Managers;
 using Alduin.Logic.Repositories;
 using Alduin.Logic.UnitOfWork;
@@ -29,7 +28,7 @@ namespace Alduin.Web.Infrastructure
 
         private static void SetupSingletons(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddSingleton(SessionFactory.BuildConfiguration(configuration.GetConnectionString("Alduin"))
+            services.AddSingleton(SessionFactory.BuildConfiguration(configuration.GetConnectionString("ConnectDataBase"))
                 .BuildSessionFactory());
             services.AddSingleton<LocalizationService>();
         }
@@ -45,23 +44,19 @@ namespace Alduin.Web.Infrastructure
             services.AddScoped<AppIdentityErrorDescriber, AppIdentityErrorDescriber>();
 
             // Managers
-            services.AddScoped<ICreditCardManager, CreditCardManager>();
+
             services.AddScoped<IUserManager, UserManager>();
             services.AddScoped<IUserClaimManager, UserClaimManager>();
-            services.AddScoped<IRecordManager, RecordManager>();
-            services.AddScoped<IAccountManager, AccountManager>();
-            services.AddScoped<IRecordCategoryManager, RecordCategoryManager>();
-            services.AddScoped<IRecordTemplateManager, RecordTemplateManager>();
+            services.AddScoped<IBotManager, BotManager>();
+            services.AddScoped<IInvitationManager, InvitationManager>();
+
             // Repositories
-            services.AddScoped<ICreditCardRepository, CreditCardRepository>();
+
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserClaimRepository, UserClaimRepository>();
-            services.AddScoped<IRecordRepository, RecordRepository>();
-            services.AddScoped<IAccountRepository, AccountRepository>();
-            services.AddScoped<IRecordCategoryRepository, RecordCategoryRepository>();
-            services.AddScoped<IRecordTemplateRepository, RecordTemplateRepository>();
+            services.AddScoped<IBotRepository, BotRepository>();
+            services.AddScoped<IInvitationRepository, InvitationRepository>();
         }
-
         private static void SetupTransient(IServiceCollection services)
         {
             // Validators

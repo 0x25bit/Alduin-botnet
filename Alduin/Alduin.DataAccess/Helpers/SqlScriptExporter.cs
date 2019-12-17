@@ -25,6 +25,10 @@ namespace Alduin.DataAccess.Helpers
                 script = new List<string>(config.GenerateSchemaCreationScript(new PostgreSQL83Dialect()));
                 File.WriteAllText(Path.Combine(outputFolder, "_CreateSchema.sql"), string.Join(";" + System.Environment.NewLine, script));
             }
+            else
+            {
+                Directory.CreateDirectory(outputFolder);
+            }
         }
     }
 }

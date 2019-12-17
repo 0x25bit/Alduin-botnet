@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System;
+using System.Collections.Generic;
 using System.Security.Claims;
+using System.Text;
 using Alduin.Shared.Enums;
 
 namespace Alduin.Logic.Identity

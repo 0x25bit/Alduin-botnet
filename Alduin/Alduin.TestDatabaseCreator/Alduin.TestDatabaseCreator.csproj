@@ -25,12 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NHibernate" Version="5.2.6" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Alduin.DataAccess\Alduin.DataAccess.csproj" />
-    <ProjectReference Include="..\Alduin.Shared\Alduin.Shared.csproj" />
   </ItemGroup>
 
 </Project>
