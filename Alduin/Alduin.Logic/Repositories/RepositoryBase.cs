@@ -29,7 +29,6 @@ namespace Alduin.Logic.Repositories
             var dto = _mapper.Map<TDTO>(entity);
             return dto;
         }
-
         public TDTO[] Get(IEnumerable<int> ids)
         {
             var entities = new List<TEntity>();
@@ -52,5 +51,11 @@ namespace Alduin.Logic.Repositories
 
             return dtos.ToArray();
         }
+        /*public TDTO GetAll(int id)
+        {
+            var entities = _session.QueryOver<TEntity>(id).List();
+            var dto = _mapper.Map<TDTO>(entities);
+            return dto;
+        }*/
     }
 }

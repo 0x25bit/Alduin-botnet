@@ -85,3 +85,16 @@ body {
   text-align: center; }
   .form-check .form-check-input {
     margin-left: 5px; }
+
+.invitation-btn {
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 15px;
+  transition: .2s;
+  font-size: 1.1em;
+  font-weight: bold; }
+  .invitation-btn:hover {
+    background-color: white;
+    color: black; }

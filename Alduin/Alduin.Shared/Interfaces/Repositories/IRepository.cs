@@ -9,9 +9,9 @@ namespace Alduin.Shared.Interfaces.Repositories
         where TDTO : IDTO
     {
         TDTO Get(int id);
-
         TDTO[] Get(IEnumerable<int> ids);
 
         TDTO[] GetAll();
+        //TDTO[] GetAll(int id);
     }
 }

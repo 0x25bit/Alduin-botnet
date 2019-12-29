@@ -74,8 +74,8 @@ namespace Alduin.Web
             {
                 opt.Cookie.HttpOnly = true;
                 opt.ExpireTimeSpan = TimeSpan.FromDays(365);
-                opt.LoginPath = "/Account/Login";
-                opt.LogoutPath = "/Account/Logout";
+                opt.LoginPath = "/UserAccount/Login";
+                opt.LogoutPath = "/UserAccount/Logout";
                 opt.AccessDeniedPath = "/Home/AccessDenied";
                 opt.ReturnUrlParameter = "returnUrl";
             });
@@ -155,7 +155,7 @@ namespace Alduin.Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=UserAccount}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
 

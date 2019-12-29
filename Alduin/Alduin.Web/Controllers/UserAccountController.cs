@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Alduin.Logic.Mediator.Commands;
 using Alduin.Logic.Mediator.Queries;
 using Alduin.Web.Models;
-
+using Alduin.Logic.Identity;
 namespace Alduin.Web.Controllers
 {
     public class UserAccountController : ControllerBase
@@ -27,6 +27,7 @@ namespace Alduin.Web.Controllers
         [HttpGet]
         public IActionResult Login(string returnUrl = null)
         {
+
             var title = _localizer["Login"];
             SetTitle(title);
             ViewData["Login"] = title;
@@ -85,16 +86,20 @@ namespace Alduin.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Register()
+        public async Task<IActionResult> Register(string Key)
         {
             var title = _localizer["Registration"];
             SetTitle(title);
             ViewData["Registration"] = title;
             SetTitle("Registration");
             await FillIdentityOptionsViewBag();
-
-            var model = new RegisterModel();
-            return View(model);
+            var query = new GetInvitationByKeyQuery { invitationKey = Key };
+            var result = await _mediator.Send(query);
+            if (result != null && !(result.Used)) {
+                var model = new RegisterModel();
+                return View(model);
+            }
+            return RedirectToAction(nameof(Login));
         }
 
         [HttpPost]
@@ -102,7 +107,7 @@ namespace Alduin.Web.Controllers
         {
             SetTitle("Registration");
             await FillIdentityOptionsViewBag();
-
+            
             if (!ModelState.IsValid)
                 return View(model);
 

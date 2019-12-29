@@ -132,6 +132,9 @@
   <data name="List" xml:space="preserve">
     <value>Lista</value>
   </data>
+  <data name="Login" xml:space="preserve">
+    <value>Bejelenkezés</value>
+  </data>
   <data name="Privacy" xml:space="preserve">
     <value>Adatvédelmi</value>
   </data>
