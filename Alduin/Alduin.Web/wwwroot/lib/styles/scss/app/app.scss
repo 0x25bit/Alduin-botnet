@@ -123,8 +123,36 @@ body {
     transition: .2s;
     font-size: 1.1em;
     font-weight: bold;
+
     &:hover {
         background-color: white;
         color: black;
+    }
+}
+.refresh {
+    font-size: .9em;
+    padding: 5px 10px;
+}
+.invitation-board {
+    padding: 20px;
+    margin: 20px;
+    width: 750px;
+    border: 1px solid $menu-bd-color;
+    background-color: $menu-bg-color;
+
+    table {
+        border: 1px solid $menu-bd-color;
+        width: 100%;
+
+        th {
+            border: 1px solid $menu-bd-color;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid $menu-bd-color;
+            text-align: center;
+        }
     }
 }

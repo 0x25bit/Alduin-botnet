@@ -98,3 +98,24 @@ body {
   .invitation-btn:hover {
     background-color: white;
     color: black; }
+
+.refresh {
+  font-size: .9em;
+  padding: 5px 10px; }
+
+.invitation-board {
+  padding: 20px;
+  margin: 20px;
+  width: 750px;
+  border: 1px solid #131418;
+  background-color: #272A31; }
+  .invitation-board table {
+    border: 1px solid #131418;
+    width: 100%; }
+    .invitation-board table th {
+      border: 1px solid #131418;
+      font-weight: bold;
+      text-align: center; }
+    .invitation-board table td {
+      border: 1px solid #131418;
+      text-align: center; }

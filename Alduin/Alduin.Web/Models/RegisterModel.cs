@@ -14,6 +14,7 @@ namespace Alduin.Web.Models
         [DisplayName("E-mail")]
         public UserDTO Email { get; set; }
 
+        [DataType(DataType.Password)]
         [Display(Name = "Password")]
         [DisplayName("Password")]
         public string Password { get; set; }

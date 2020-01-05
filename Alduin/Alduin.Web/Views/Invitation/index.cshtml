@@ -2,18 +2,106 @@
 @{
     ViewData["Title"] = ViewData["Invitation"];
 }
-<div class="contatiner">
+<div class="contatiner d-flex justify-content-center">
     <div class="row">
-        <div class="col-12">
-            <h1>@ViewData["Invitation"]</h1>
-        </div>
-        <div class="col-12 text-center">
-            <button class="invitation-btn">@ViewData["Generate new invitation"]</button>
+        <div class="invitation-board">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>@Localizer["Invitation"]</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mt-5 mb-5">
+                    <button class="invitation-btn">@Localizer["Generate new invitation"]</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <h5>@Localizer["Your invitations"]:</h5>
+                </div>
+                <div class="col-4 text-center">
+                    <button class="invitation-btn refresh" id="refresh">@Localizer["Refresh"]</button>
+                </div>
+                <div class="col-4 text-right">
+                    <button class="invitation-btn refresh" id="hide-btn"></button>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <table>
+                    <tr>
+                        <th width="10%">@Localizer["Id"]</th>
+                        <th width="20%">@Localizer["Key"]</th>
+                        <th width="40%">Url</th>
+                        <th width="10%">@Localizer["Used"]</th>
+                        <th width="20%">@Localizer["Date"]</th>
+                    </tr>
+                </table>
+                <table id="invitations">
+
+                </table>
+            </div>
+            
         </div>
     </div>
 </div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
 <script>
-    console.log("@ViewData["Result"]");
+    var hide = '@Localizer["Hide"]';
+    var show = '@Localizer["Show"]';
+    var hide_btn = false;
+    function Json(){
+        $("#invitations").text("");
+        var yes = '@Localizer["Yes"]';
+        var no = '@Localizer["No"]';
+        var url = window.location.origin;
+        $.ajax({
+            type: "GET",
+            url: "/Invitation/GetUserInvitation",
+            dataType: 'json',
+            success: function (data) {
+                for(var i = 0; i < data.length; i++){
+                    console.log(data[i].invitationKey);
+                    var used;
+                    if(data[i].Used){
+                        used = yes;
+                    }else{
+                        used = no;
+                    }
+                    $("#invitations").append("<tr><td width='10%'>" + data[i].id + "</td><td width='20%'>" + data[i].invitationKey + "</td><td width='40%'><a href='" + url + "/UserAccount/Register?key=" + data[i].invitationKey + "'>" + url + "/UserAccount/Register?key=" + data[i].invitationKey + "</a></td><td width='10%'>" + used + "</td><td width='20%'>" + data[i].creationDateUTC + "</td></tr>");
+                }
+            },
+            error: function(){
+                return "Error";
+            }
+        });
+    }
+    function hideTable(){
+        $("#invitations").text("");
+        $("#hide-btn").text(show);
+        hide_btn = true;
+    }
+    function showTable(){
+        Json();
+        $("#hide-btn").text(hide);
+        hide_btn = false;
+    }
+
+    $( document ).ready(function() {
+        Json();
+        $("#hide-btn").text(hide);
+    });
+    $("#refresh").click(function() {
+        Json();
+    });
+    $("#hide-btn").click(function() {
+        if(hide_btn){
+            showTable()
+        }else{
+            hideTable();
+        }
+    });
+
+    
 </script>
 
 

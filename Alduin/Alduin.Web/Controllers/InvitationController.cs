@@ -28,9 +28,6 @@ namespace Alduin.Web.Controllers
         public async Task<IActionResult> Index()
         {
             //var url = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
-            
-            ViewData["Invitation"] = _localizer["Invitation"];
-            ViewData["Generate new invitation"] = _localizer["Generate new invitation"];
             return View();
         }
         public async Task<IActionResult> GenerateNew()

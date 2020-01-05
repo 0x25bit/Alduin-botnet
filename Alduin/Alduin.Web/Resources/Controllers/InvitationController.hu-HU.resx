@@ -117,13 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Generate new invitation" xml:space="preserve">
-    <value>Új meghívó generálása</value>
-  </data>
-  <data name="Invitation" xml:space="preserve">
-    <value>Meghívás</value>
-  </data>
-  <data name="Your invitations" xml:space="preserve">
-    <value>A meghívóid</value>
-  </data>
 </root>
