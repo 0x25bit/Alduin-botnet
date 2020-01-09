@@ -25,9 +25,8 @@ namespace Alduin.Web.Controllers
             _mediator = mediator;
             _localizer = localizer;
         }
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            //var url = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
             return View();
         }
         public async Task<IActionResult> GenerateNew()

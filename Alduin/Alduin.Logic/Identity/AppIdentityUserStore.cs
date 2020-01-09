@@ -49,7 +49,7 @@ namespace Alduin.Logic.Identity
             if (identityUser == null)
                 throw new ArgumentNullException(nameof(identityUser));
 
-            //identityUser.UserName = identityUser.Email;
+            identityUser.UserName = identityUser.Email;
 
             var newUser = new UserDTO();
             _mapper.Map(identityUser, newUser);

@@ -1,0 +1,48 @@
+﻿
+<div class="container d-flex justify-content-center">
+    <div class="row">
+        <div class="auth-form">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>@Localizer["Commands"]</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <select class="command-select">
+                        <option selected disabled hidden>Chose</option>
+                        <optgroup label="@Localizer["General commands"]">
+                            <option value="ExecuteFile">@Localizer["Execute file"]</option>
+                            <option value="OpenWebsite">@Localizer["Open website"]</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="auth-form">
+            <div id="Commands">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+    function getFile(file) {
+        $.ajax({
+            url: file,
+            Type: "Get",
+            success: function (data) {
+                $("#Commands").text();
+                $("#Commands").html(data);
+            }
+        });
+    }
+    $(".command-select").change(function () {
+        $(".command-select option:selected").each(function () {
+            console.log($(this).val());
+            getFile($(this).val());
+        });
+    });
+
+</script>

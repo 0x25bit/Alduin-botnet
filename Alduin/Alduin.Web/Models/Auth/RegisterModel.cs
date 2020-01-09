@@ -6,21 +6,19 @@ namespace Alduin.Web.Models
 {
     public class RegisterModel
     {
-        [Display(Name = "Username")]
-        [DisplayName("Username")]
         public UserDTO User { get; set; }
 
-        [Display(Name = "E-mail")]
-        [DisplayName("E-mail")]
-        public UserDTO Email { get; set; }
-
+        [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         [DisplayName("Password")]
         public string Password { get; set; }
 
+        [Required]
+        [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
         [DisplayName("Confirm password")]
         public string PasswordRe { get; set; }
+        public string Key { get; set; }
     }
 }

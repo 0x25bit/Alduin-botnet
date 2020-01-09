@@ -1,0 +1,26 @@
+﻿@model ExecuteModel
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+@{
+    ViewData["Title"] = Localizer["Execute or download file"];
+}
+<form asp-controller="Commands" asp-action="ExecuteFile" method="post">
+    <h2>@Localizer["Execute or download file"]</h2>
+    <div class="form-group">
+        <label asp-for="Url"></label>
+        <input asp-for="Url" />
+        <span asp-validation-for="Url"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="form-check">
+        <span asp-validation-for="Run"></span>
+        <input asp-for="Run" class="form-check-input">
+        <label class="form-check-label" asp-for="Run">@Localizer["Run it too ?"]</label>
+    </div>
+    <button class="btn btn-primary mt-2 w-100">@Localizer["Submit"]</button>
+</form>

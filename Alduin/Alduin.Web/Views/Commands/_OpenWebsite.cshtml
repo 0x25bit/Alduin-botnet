@@ -1,0 +1,23 @@
+﻿@model WebsiteModel
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+<form asp-controller="Commands" asp-action="OpenWebsite" method="post">
+    <h2>Open website</h2>
+    <div class="form-group">
+        <label asp-for="Url"></label>
+        <input asp-for="Url" />
+        <span asp-validation-for="Url"></span>
+    </div>
+    <div class="form-check">
+        <span asp-validation-for="Closed"></span>
+        <input asp-for="Closed" class="form-check-input">
+        <label class="form-check-label" asp-for="Closed">@Localizer["Cannot be closed"]</label>
+    </div>
+    <div class="form-check">
+        <span asp-validation-for="Hidde"></span>
+        <input asp-for="Hidde" class="form-check-input">
+        <label class="form-check-label" asp-for="Hidde">@Localizer["Hidden"]</label>
+    </div>
+    <button class="btn btn-primary mt-2 w-100">@Localizer["Submit"]</button>
+</form>

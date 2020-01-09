@@ -8,16 +8,10 @@
         <div class="col-12">
             
             <form asp-controller="UserAccount" class="auth-form" asp-action="Register" method="post">
-                <h2>@ViewData["Registration"]</h2>
+                <h2>@Localizer["Registration"]</h2>
                 <hr />
                 <div asp-validation-summary="ModelOnly"></div>
-
-                <div class="form-group">
-                    <label asp-for="User.Name"></label>
-                    <input asp-for="User.Name" class="form-control" />
-                    <span asp-validation-for="User.Name"></span>
-                </div>
-
+                <input asp-for="Key" type="hidden" />
                 <div class="form-group">
                     <label asp-for="User.Email"></label>
                     <input asp-for="User.Email" class="form-control" />
@@ -35,7 +29,7 @@
                     <input asp-for="PasswordRe" class="form-control" />
                     <span asp-validation-for="PasswordRe"></span>
                 </div>
-                <button class="btn btn-primary mt-2 w-100">@ViewData["Registration"]</button>
+                <button class="btn btn-primary mt-2 w-100">@Localizer["Registration"]</button>
 
             </form>
         </div>

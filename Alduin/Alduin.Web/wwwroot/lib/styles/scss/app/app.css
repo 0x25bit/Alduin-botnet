@@ -16,7 +16,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #B4B5B7;
+  color: #d4d6d9;
   background-color: #1C1E23;
   margin-bottom: 60px;
   padding: 0;
@@ -40,9 +40,9 @@ body {
   overflow: hidden; }
   .menu-container a {
     text-decoration: none;
-    color: #B4B5B7; }
+    color: #d4d6d9; }
     .menu-container a:hover {
-      color: #B4B5B7; }
+      color: #d4d6d9; }
 
 .menu-row {
   transition: .3s; }
@@ -56,7 +56,7 @@ body {
 
 .select-language {
   background-color: #272A31;
-  color: #B4B5B7;
+  color: #d4d6d9;
   border-radius: 5px; }
 
 .active {
@@ -119,3 +119,18 @@ body {
     .invitation-board table td {
       border: 1px solid #131418;
       text-align: center; }
+
+.command-select {
+  width: 100%;
+  background-color: #15A0BF;
+  color: #d4d6d9;
+  padding: 5px 10px;
+  border: 1px solid #131418; }
+  .command-select option {
+    font-size: 1.1em;
+    color: #d4d6d9;
+    padding: 2px;
+    border: 1px solid #131418; }
+  .command-select optgroup {
+    color: #d4d6d9 !important;
+    font-weight: bold; }

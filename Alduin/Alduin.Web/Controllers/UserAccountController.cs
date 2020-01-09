@@ -79,24 +79,18 @@ namespace Alduin.Web.Controllers
             return Json("WIP");
         }
 
-        public IActionResult ChangePassword()
-        {
-            // TODO finish
-            return Json("WIP");
-        }
-
         [HttpGet]
         public async Task<IActionResult> Register(string Key)
         {
             var title = _localizer["Registration"];
             SetTitle(title);
-            ViewData["Registration"] = title;
-            SetTitle("Registration");
+
             await FillIdentityOptionsViewBag();
             var query = new GetInvitationByKeyQuery { invitationKey = Key };
             var result = await _mediator.Send(query);
             if (result != null && !(result.Used)) {
                 var model = new RegisterModel();
+                model.Key = Key;
                 return View(model);
             }
             return RedirectToAction(nameof(Login));
@@ -105,22 +99,35 @@ namespace Alduin.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterModel model)
         {
-            SetTitle("Registration");
+            var title = _localizer["Registration"];
+            SetTitle(title);
             await FillIdentityOptionsViewBag();
             
-            if (!ModelState.IsValid)
-                return View(model);
+            /*if (!ModelState.IsValid)
+                return View(model);*/
 
+            var query = new GetInvitationByKeyQuery { invitationKey = model.Key };
+            var resultKey = await _mediator.Send(query);
+            if (resultKey.Used)
+            {
+                return View(model);
+            }
+            
             var registerCommand = new RegisterCommand
             {
                 User = model.User,
-                Email = model.Email,
                 Password = model.Password
             };
+            var UpdateInvitationCommand = new UpdateInvitationCommand
+            {
+                id = resultKey.Id,
+            };
             var result = await _mediator.Send(registerCommand);
-
             if (result.Suceeded)
+            {
+                var confirm = await _mediator.Send(UpdateInvitationCommand);
                 return RedirectToAction(nameof(HomeController.Index), "Home");
+            } 
             else
             {
                 foreach (var msg in result.ErrorMessages)

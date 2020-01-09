@@ -59,3 +59,6 @@ E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\Razor\Views\U
 E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\Alduin.Web.Resources.Views.UserSettings.ChangePassword.hu-HU.resources
 E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\Alduin.Web.Resources.Views.Invitation.index.hu-HU.resources
 E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\Alduin.Web.Resources.Views.Shared._SelectLanguagePartial.resources
+E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\Razor\Views\Commands\Index.cshtml.g.cs
+E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\Razor\Views\Commands\_ExecuteFile.cshtml.g.cs
+E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\Razor\Views\Commands\_OpenWebsite.cshtml.g.cs

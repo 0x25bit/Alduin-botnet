@@ -7,7 +7,6 @@ namespace Alduin.Logic.Mediator.Commands
     public class RegisterCommand : IRequest<ActionResult>
     {
         public UserDTO User { get; set; }
-        public UserDTO Email { get; set; }
         public string Password { get; set; }
     }
 }
