@@ -150,4 +150,7 @@
   <data name="Username" xml:space="preserve">
     <value>Felhaszáló név</value>
   </data>
+  <data name="Website Url" xml:space="preserve">
+    <value>Weboldal Url-je</value>
+  </data>
 </root>

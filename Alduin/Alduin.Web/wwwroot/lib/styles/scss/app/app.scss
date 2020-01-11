@@ -11,12 +11,22 @@ $menu-hv-color: rgba(21, 159, 190, 0.5);
 $font-family: 'Roboto', sans-serif;
 $default-border: 1px solid $menu-bd-color;
 $invitation-border: 2px solid white;
-@media (min-width: 768px) {
+$break-small: 768px;
+$break-large: 1200px;
+
+@media (min-width: $break-small) {
     html {
         font-size: 16px;
     }
 }
-
+@media screen and (max-width: $break-large) {
+    .menu-container {
+        max-width: 45px;
+    }
+    .mini-menu {
+        visibility: hidden;
+    }
+}
 button.accept-policy {
     font-size: 1rem;
     line-height: inherit;
@@ -51,12 +61,14 @@ body {
 
 .menu-container {
     position: fixed;
-    height: 500px;
-    width: 200px;
+    height: auto;
+    width: 220px;
     z-index: 2;
     background-color: $menu-bg-color;
     border: $default-border;
     overflow: hidden;
+    transition: .2s;
+    transition-timing-function: ease-in-out;
 
     a {
         text-decoration: none;
@@ -73,6 +85,9 @@ body {
     &:hover {
         background-color: $menu-hv-color;
     }
+}
+.menu-row-content{
+    padding: 5px 15px;
 }
 .header-menu {
     width: 100%;
@@ -176,4 +191,29 @@ body {
         color: $text-color !important;
         font-weight: bold;
     }
+}
+.mini-menu {
+    transition: .2s;
+    overflow: hidden;
+    margin-left: 5px;
+}
+.mini-menu-btn {
+    padding: 2px;
+    background-color: transparent;
+    color: $text-color;
+    text-decoration: none;
+    border: none;
+    transition: .2s;
+
+    &:hover {
+        color: $active-color;
+    }
+
+    &:active {
+        background-color: $active-color;
+        color: $text-color;
+    }
+}
+.nobreak {
+    white-space: nowrap;
 }
