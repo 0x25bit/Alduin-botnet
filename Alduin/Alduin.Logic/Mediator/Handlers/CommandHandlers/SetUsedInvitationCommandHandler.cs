@@ -25,6 +25,7 @@ namespace Alduin.Logic.Mediator.Handlers.CommandHandlers
             cancellationToken.ThrowIfCancellationRequested();
             InvitationEntity previous = _session.Get<InvitationEntity>(request.id);
             previous.Used = true;
+            previous.ModificationDateUTC = DateTime.UtcNow;
             using (var trans = _session.BeginTransaction())
             {
                 _session.Update(previous);

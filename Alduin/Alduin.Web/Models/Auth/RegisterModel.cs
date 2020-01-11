@@ -6,6 +6,8 @@ namespace Alduin.Web.Models
 {
     public class RegisterModel
     {
+        [Display(Name = "Name")]
+        [DisplayName("Name")]
         public UserDTO User { get; set; }
 
         [Required]

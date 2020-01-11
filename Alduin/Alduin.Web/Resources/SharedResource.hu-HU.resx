@@ -123,6 +123,12 @@
   <data name="E-mail" xml:space="preserve">
     <value>E-mail cím</value>
   </data>
+  <data name="File direct link" xml:space="preserve">
+    <value>Fájl direkt linkje</value>
+  </data>
+  <data name="File new name" xml:space="preserve">
+    <value>Fájl új neve</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Név</value>
   </data>

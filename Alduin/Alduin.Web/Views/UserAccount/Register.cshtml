@@ -13,6 +13,11 @@
                 <div asp-validation-summary="ModelOnly"></div>
                 <input asp-for="Key" type="hidden" />
                 <div class="form-group">
+                    <label asp-for="User.Name"></label>
+                    <input asp-for="User.Name" class="form-control" />
+                    <span asp-validation-for="User.Name"></span>
+                </div>
+                <div class="form-group">
                     <label asp-for="User.Email"></label>
                     <input asp-for="User.Email" class="form-control" />
                     <span asp-validation-for="User.Email"></span>

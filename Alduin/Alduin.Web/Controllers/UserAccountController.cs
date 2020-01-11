@@ -103,8 +103,8 @@ namespace Alduin.Web.Controllers
             SetTitle(title);
             await FillIdentityOptionsViewBag();
             
-            /*if (!ModelState.IsValid)
-                return View(model);*/
+            if (!ModelState.IsValid)
+                return View(model);
 
             var query = new GetInvitationByKeyQuery { invitationKey = model.Key };
             var resultKey = await _mediator.Send(query);
