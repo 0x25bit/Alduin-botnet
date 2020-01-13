@@ -8,6 +8,7 @@ $menu-bd-color: #131418;
 $active-color: #15A0BF;
 $body-bg-color: #1C1E23;
 $menu-hv-color: rgba(21, 159, 190, 0.5);
+$head-color: rgb(21, 159, 190);
 $font-family: 'Roboto', sans-serif;
 $default-border: 1px solid $menu-bd-color;
 $invitation-border: 2px solid white;
@@ -34,20 +35,23 @@ button.accept-policy {
 
 
 html {
-    position: relative;
+    //position: relative;
     min-height: 100%;
-    padding: 0;
-    margin: 0;
+    max-width: 99%;
+    padding: 0 !important;
+    margin: 0 !important;
     font-size: 14px;
+    overflow-x: hidden;
 }
 
 body {
-    font-family: $font-family; 
+    font-family: $font-family;
     color: $text-color;
     background-color: $body-bg-color;
-    margin-bottom: 60px;
-    padding: 0;
-    margin: 0;
+    //margin-bottom: 60px;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 101% !important;
 }
 
 .footer {
@@ -216,4 +220,30 @@ body {
 }
 .nobreak {
     white-space: nowrap;
+}
+.list-board {
+    padding: 20px;
+    margin: 20px;
+    width: 750px;
+    border: $default-border;
+    background-color: $menu-bg-color;
+
+    table {
+        border: $default-border;
+        width: 100%;
+
+        th {
+            border: $default-border;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        td {
+            border: $default-border;
+            text-align: center;
+        }
+    }
+}
+.bg-head-color {
+    background-color: $head-color;
 }

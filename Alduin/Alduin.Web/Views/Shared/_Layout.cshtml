@@ -24,131 +24,137 @@
     <script src="https://kit.fontawesome.com/6096ca5492.js"></script>
 </head>
 <body>
-    <header>
-        <div class="header-menu">
-            <div class="row align-items-center">
-                <div class="col-2 text-center">
-                    <button class="mini-menu-btn">
-                        <span class="h3">
-                            <i class="fas fa-bars"></i>
-                        </span>
-                    </button>
-                </div>
-                <div class="col-2 text-center">
-                    M/byte
-                </div>
-                <div class="col-4 align-middle text-center">
-                    <span class="h3">Alduin</span>
-                </div>
-                <div class="col-4 text-lg-right">
-                    @if (SignInManager.IsSignedIn(User))
-                    {
-                        <span class="p-2">
-                            @Localizer["Hi"], @User.Identity.Name
-                        </span>
-                    }
-                </div>
+    <div class="header-menu">
+        <div class="row align-items-center">
+            <div class="col-2 text-center">
+                <button class="mini-menu-btn">
+                    <span class="h3">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </button>
             </div>
-        </div>
-        <div class="menu-container">
-            <div class="container">
+            <div class="col-2 text-center">
+                M/byte
+            </div>
+            <div class="col-4 align-middle text-center">
+                <span class="h3">Alduin</span>
+            </div>
+            <div class="col-4 text-lg-right">
                 @if (SignInManager.IsSignedIn(User))
                 {
-                    <div class="row mt-3">
-                        <div class="w-100 menu-row-content nobreak">
-                            <i class="fas fa-home"></i>
-                            <span class="p-0 font-weight-bold mini-menu">
-                                <u>@Localizer["Main menu"]</u>:
-                            </span>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <a href="#" class="menu-row w-100">
-                            <div class="menu-row-content nobreak">
-                                <i class="fas fa-list h6"></i>
-                                <span class="p-1 mini-menu">
-                                    @Localizer["List"]
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="row mt-3">
-                        <a href="/Commands/" class="menu-row w-100">
-                            <div class="menu-row-content nobreak">
-                                <i class="fas fa-terminal h6"></i>
-                                <span class="p-1 mini-menu">
-                                    @Localizer["Commands"]
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="row mt-3">
-                        <a href="#" class="menu-row w-100">
-                            <div class="menu-row-content nobreak">
-                                <i class="fas fa-stream h6"></i>
-                                <span class="p-1 mini-menu">
-                                    @Localizer["Streams"]
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="w-100 menu-row-content nobreak">
-                            <i class="fas fa-users-cog h6"></i>
-                            <span class="p-0 font-weight-bold mini-menu">
-                                <u>@Localizer["User settings"]</u>:
-                            </span>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <a href="/UserSettings/ChangePassword" class="menu-row w-100">
-                            <div class="menu-row-content nobreak">
-                                <i class="fas fa-unlock-alt"></i>
-                                <span class="p-1 mini-menu">
-                                    @Localizer["Change password"]
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="row mt-3">
-                        <a href="/Invitation/" class="menu-row w-100">
-                            <div class="menu-row-content nobreak">
-                                <i class="fas fa-envelope-open-text h6"></i>
-                                <span class="p-1 mini-menu">
-                                    @Localizer["Invitation"]
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="row mt-3 mb-3">
-                        <a href="/UserAccount/Logout" class="menu-row w-100">
-                            <div class="menu-row-content nobreak">
-                                <i class="fas fa-sign-out-alt h6"></i>
-                                <span class="p-1 mini-menu">
-                                    @Localizer["Quit"]
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                }
-                else
-                {
-                    <div class="row mt-3">
-                        <a href="/UserAccount/" class="menu-row w-100">
-                            <div class="menu-row-content nobreak">
-                                <i class="fas fa-sign-in-alt h6"></i>
-                                <span class="p-1 mini-menu">
-                                    @Localizer["Login"]
-                                </span>
-                            </div>
-                            
-                        </a>
-                    </div>
+                    <span class="p-2">
+                        @Localizer["Hi"], @User.Identity.Name
+                    </span>
                 }
             </div>
         </div>
-    </header>
-
+    </div>
+    <div class="menu-container">
+        <div class="container">
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <div class="row mt-3">
+                    <div class="w-100 menu-row-content nobreak">
+                        <i class="fas fa-home"></i>
+                        <span class="p-0 font-weight-bold mini-menu">
+                            <u>@Localizer["Main menu"]</u>:
+                        </span>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <a href="/List/List" class="menu-row w-100">
+                        <div class="menu-row-content nobreak">
+                            <i class="fas fa-list h6"></i>
+                            <span class="p-1 mini-menu">
+                                @Localizer["List"]
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="row mt-3">
+                    <a href="/Commands/" class="menu-row w-100">
+                        <div class="menu-row-content nobreak">
+                            <i class="fas fa-terminal h6"></i>
+                            <span class="p-1 mini-menu">
+                                @Localizer["Commands"]
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="row mt-3">
+                    <a href="#" class="menu-row w-100">
+                        <div class="menu-row-content nobreak">
+                            <i class="fas fa-stream h6"></i>
+                            <span class="p-1 mini-menu">
+                                @Localizer["Streams"]
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="row mt-3">
+                    <a href="#" class="menu-row w-100">
+                        <div class="menu-row-content nobreak">
+                            <i class="fas fa-stream h6"></i>
+                            <span class="p-1 mini-menu">
+                                @Localizer["Statics"]
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="row mt-3">
+                    <div class="w-100 menu-row-content nobreak">
+                        <i class="fas fa-users-cog h6"></i>
+                        <span class="p-0 font-weight-bold mini-menu">
+                            <u>@Localizer["User settings"]</u>:
+                        </span>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <a href="/UserSettings/ChangePassword" class="menu-row w-100">
+                        <div class="menu-row-content nobreak">
+                            <i class="fas fa-unlock-alt"></i>
+                            <span class="p-1 mini-menu">
+                                @Localizer["Change password"]
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="row mt-3">
+                    <a href="/Invitation/" class="menu-row w-100">
+                        <div class="menu-row-content nobreak">
+                            <i class="fas fa-envelope-open-text h6"></i>
+                            <span class="p-1 mini-menu">
+                                @Localizer["Invitation"]
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="row mt-3 mb-3">
+                    <a href="/UserAccount/Logout" class="menu-row w-100">
+                        <div class="menu-row-content nobreak">
+                            <i class="fas fa-sign-out-alt h6"></i>
+                            <span class="p-1 mini-menu">
+                                @Localizer["Quit"]
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            }
+            else
+            {
+                <div class="row mt-3 mb-3">
+                    <a href="/UserAccount/" class="menu-row w-100">
+                        <div class="menu-row-content nobreak">
+                            <i class="fas fa-sign-in-alt h6"></i>
+                            <span class="p-1 mini-menu">
+                                @Localizer["Login"]
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
     <div class="container">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">

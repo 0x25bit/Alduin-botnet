@@ -14,19 +14,20 @@ button.accept-policy {
   line-height: inherit; }
 
 html {
-  position: relative;
   min-height: 100%;
-  padding: 0;
-  margin: 0;
-  font-size: 14px; }
+  max-width: 99%;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 14px;
+  overflow-x: hidden; }
 
 body {
   font-family: "Roboto", sans-serif;
   color: #d4d6d9;
   background-color: #1C1E23;
-  margin-bottom: 60px;
-  padding: 0;
-  margin: 0; }
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 101% !important; }
 
 .footer {
   border-top: 1px solid #131418;
@@ -166,3 +167,23 @@ body {
 
 .nobreak {
   white-space: nowrap; }
+
+.list-board {
+  padding: 20px;
+  margin: 20px;
+  width: 750px;
+  border: 1px solid #131418;
+  background-color: #272A31; }
+  .list-board table {
+    border: 1px solid #131418;
+    width: 100%; }
+    .list-board table th {
+      border: 1px solid #131418;
+      font-weight: bold;
+      text-align: center; }
+    .list-board table td {
+      border: 1px solid #131418;
+      text-align: center; }
+
+.bg-head-color {
+  background-color: #159fbe; }
