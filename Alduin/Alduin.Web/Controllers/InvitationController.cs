@@ -40,8 +40,16 @@ namespace Alduin.Web.Controllers
                 UserId = user.Id
             };
             var result = await _mediator.Send(InvitationCommand);
-            
-            return Json(result);
+            if (result.Suceeded)
+            {
+                ViewData["status"] = _localizer["Invitation generate success"];
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                ViewData["status"] = _localizer["Invitation generate unsuccess"];
+                return RedirectToAction(nameof(Index));
+            }
         }
         public async Task<IActionResult> GetUserInvitation()
         {

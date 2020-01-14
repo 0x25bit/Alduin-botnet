@@ -20,9 +20,4 @@
     <ProjectReference Include="..\Alduin.Logic\Alduin.Logic.csproj" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <Folder Include="wwwroot\img\" />
-  </ItemGroup>
-
 </Project>

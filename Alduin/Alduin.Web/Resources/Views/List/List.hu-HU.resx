@@ -117,7 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Domain" xml:space="preserve">
+    <value>Domain</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Azonosító</value>
+  </data>
+  <data name="Last seen" xml:space="preserve">
+    <value>Utoljára látva</value>
+  </data>
   <data name="List" xml:space="preserve">
     <value>Lista</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>Elérhető</value>
   </data>
 </root>

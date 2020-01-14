@@ -12,7 +12,8 @@
             </div>
             <div class="row">
                 <div class="col-12 text-center mt-5 mb-5">
-                    <button class="invitation-btn">@Localizer["Generate new invitation"]</button>
+                    <a href="/invitation/GenerateNew"><button class="invitation-btn">@Localizer["Generate new invitation"]</button></a>
+                    <h5>@ViewData["status"]</h5>
                 </div>
             </div>
             <div class="row">
@@ -58,11 +59,17 @@
             type: "GET",
             url: "/Invitation/GetUserInvitation",
             dataType: 'json',
+            beforeSend: function () {
+                $('#invitations').append("<div class='ajax-loading'></div>");
+            },
+            complete: function () {
+                $('.ajax-loading').remove();
+            },
             success: function (data) {
                 for(var i = 0; i < data.length; i++){
-                    console.log(data[i].invitationKey);
                     var used;
-                    if(data[i].Used){
+                    console.log(data[i].used);
+                    if(data[i].used){
                         used = yes;
                     }else{
                         used = no;
@@ -71,7 +78,7 @@
                 }
             },
             error: function(){
-                return "Error";
+                console.log("Error");
             }
         });
     }

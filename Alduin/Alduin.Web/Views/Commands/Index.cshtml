@@ -32,6 +32,12 @@
         $.ajax({
             url: file,
             Type: "Get",
+            beforeSend: function () {
+                $('.Commands').append("<div class='ajax-loading'></div>");
+            },
+            complete: function () {
+                $('.ajax-loading').remove();
+            },
             success: function (data) {
                 $("#Commands").text();
                 $("#Commands").html(data);
