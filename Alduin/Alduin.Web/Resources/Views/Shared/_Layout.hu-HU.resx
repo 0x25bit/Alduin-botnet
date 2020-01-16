@@ -150,6 +150,9 @@
   <data name="Save" xml:space="preserve">
     <value>Mentés</value>
   </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Statisztika</value>
+  </data>
   <data name="Streams" xml:space="preserve">
     <value>Közvetítések</value>
   </data>

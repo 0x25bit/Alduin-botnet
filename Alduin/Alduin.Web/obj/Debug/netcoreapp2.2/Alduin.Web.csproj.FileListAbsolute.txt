@@ -67,3 +67,5 @@ E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\Alduin.Web.Re
 E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\Alduin.Web.Resources.Views.Commands._OpenWebsite.hu-HU.resources
 E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\Razor\Views\List\List.cshtml.g.cs
 E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\Alduin.Web.Resources.Views.List.List.hu-HU.resources
+E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\Razor\Views\Statics\Index.cshtml.g.cs
+E:\project\Alduin-botnet\Alduin\Alduin.Web\obj\Debug\netcoreapp2.2\Alduin.Web.Resources.Views.Statics.Index.hu-HU.resources

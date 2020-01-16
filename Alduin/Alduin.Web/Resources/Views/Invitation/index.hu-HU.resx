@@ -132,12 +132,6 @@
   <data name="Invitation" xml:space="preserve">
     <value>Meghívás</value>
   </data>
-  <data name="Invitation generate success" xml:space="preserve">
-    <value>Meghívó generálása sikeres</value>
-  </data>
-  <data name="Invitation generate unsuccess" xml:space="preserve">
-    <value>Meghívó generálása sikertelen</value>
-  </data>
   <data name="Key" xml:space="preserve">
     <value>Kulcs</value>
   </data>

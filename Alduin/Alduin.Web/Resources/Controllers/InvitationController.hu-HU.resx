@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Invitation generate success" xml:space="preserve">
+    <value>Meghívó generálása sikeres</value>
+  </data>
+  <data name="Invitation generate unsuccess" xml:space="preserve">
+    <value>Meghívó generálása sikertelen</value>
+  </data>
 </root>

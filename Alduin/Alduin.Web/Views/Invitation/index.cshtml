@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = ViewData["Invitation"];
+    ViewData["Title"] = Localizer["Invitation"];
 }
 <div class="contatiner d-flex justify-content-center">
     <div class="row">
@@ -8,12 +8,13 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <h1>@Localizer["Invitation"]</h1>
+                    <hr />
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 text-center mt-5 mb-5">
-                    <a href="/invitation/GenerateNew"><button class="invitation-btn">@Localizer["Generate new invitation"]</button></a>
-                    <h5>@ViewData["status"]</h5>
+                    <button id="generate-new" class="invitation-btn">@Localizer["Generate new invitation"]</button>
+                    <h5 id="Status" class="mt-2"></h5>
                 </div>
             </div>
             <div class="row">
@@ -106,6 +107,25 @@
         }else{
             hideTable();
         }
+    });
+    $("#generate-new").click(function () {
+        $.ajax({
+            type: "GET",
+            url: "/Invitation/GenerateNew",
+            beforeSend: function () {
+                $('#Status').append("<div class='ajax-loading'></div>");
+            },
+            complete: function () {
+                $('.ajax-loading').remove();
+            },
+            success: function (data) {
+                $('#Status').text(data);
+            },
+            error: function(){
+                console.log("Error");
+            }
+        });
+        Json();
     });
 
     

@@ -19,6 +19,7 @@ namespace Alduin.Web.Controllers
         private readonly IStringLocalizer<InvitationController> _localizer;
         private static Random random = new Random();
         private readonly UserManager<AppIdentityUser> _userManager;
+
         public InvitationController(IMediator mediator, IStringLocalizer<InvitationController> localizer, UserManager<AppIdentityUser> userManager)
         {
             _userManager = userManager;
@@ -42,13 +43,11 @@ namespace Alduin.Web.Controllers
             var result = await _mediator.Send(InvitationCommand);
             if (result.Suceeded)
             {
-                ViewData["status"] = _localizer["Invitation generate success"];
-                return RedirectToAction(nameof(Index));
+                return Content(_localizer["Invitation generate success"]);
             }
             else
             {
-                ViewData["status"] = _localizer["Invitation generate unsuccess"];
-                return RedirectToAction(nameof(Index));
+                return Content(_localizer["Invitation generate unsuccess"]);
             }
         }
         public async Task<IActionResult> GetUserInvitation()

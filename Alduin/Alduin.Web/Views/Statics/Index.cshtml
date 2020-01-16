@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = Localizer["Statistics"];
+}
+
+<div class="contatiner d-flex justify-content-center">
+    <div class="row">
+        <div class="invitation-board">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">@Localizer["Statistics"]</h1>
+                    <hr />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="GeoMap" class="Large-chart"></div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-6">
+                    <div id="piechart" class="Small-chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+    function geoMap() {
+        google.charts.load('current', {
+            'packages': ['geochart'],
+            // Note: you will need to get a mapsApiKey for your project.
+            // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+            'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable([
+                ['Country', 'Popularity'],
+                ['Germany', 200],
+                ['United States', 300],
+                ['Brazil', 400],
+                ['Canada', 500],
+                ['France', 600],
+                ['RU', 700]
+            ]);
+
+            var options = {
+                defaultColor: '#7e7f80',
+                colorAxis: { colors: ['#666769', '#15A0BF'] },
+                backgroundColor: 'transparent'
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('GeoMap'));
+
+            chart.draw(data, options);
+        }
+    }
+    function statusPieChart() {
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Work', 11],
+                ['Eat', 2],
+                ['Commute', 2],
+                ['Watch TV', 2],
+                ['Sleep', 7]
+            ]);
+
+            var options = {
+                title: 'Status',
+                backgroundColor: 'transparent',
+                titleTextStyle: {
+                    color: 'white'
+                },
+                tooltip: {
+                    textStyle: { color: 'black' },
+                },
+                pieSliceTextStyle: {
+                    color: 'white'
+                },
+                legend: {
+                    textStyle: {
+                        color: 'white'
+                    }
+                }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    }
+    $(document).ready(function () {
+        geoMap();
+        statusPieChart();
+    });
+</script>
+
