@@ -10,8 +10,8 @@ namespace Alduin.DataAccess.Entities
         public virtual string KeyUnique { get; set; }
         public virtual string KeyCertified { get; set; }
         public virtual string CountryCode { get; set; }
-        public virtual string LastIp { get; set; }
-        public virtual DateTime? LastLoggedInUTC { get; set; }
+        public virtual string Domain { get; set; }
         public virtual string LastIPAddress { get; set; }
+        public virtual DateTime? LastLoggedInUTC { get; set; }
     }
 }

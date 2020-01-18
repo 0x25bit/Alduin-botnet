@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Alduin.Web.Models.Bot;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Alduin.Web.Controllers
@@ -11,6 +9,14 @@ namespace Alduin.Web.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult Regbot(BotRegisterModel model)
+        {
+            if (!ModelState.IsValid)
+                return NotFound();
+
+            return Json("");
         }
     }
 }
