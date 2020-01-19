@@ -2,23 +2,72 @@
 @{
     ViewData["Title"] = "List";
 }
-<div class="container d-flex justify-content-center">
-    <div class="list-board">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="text-center">@Localizer["List"]</h1>
-                <hr />
+    <div class="container d-flex justify-content-center">
+        <div class="wide-board">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="text-center">@Localizer["List"]</h1>
+                    <hr />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3"> 
+                    <div class="form-check">
+                        <label>@Localizer["Just online"] ?</label>
+                        <input type="checkbox" class="form-check-label">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <select>
+                        <optgroup label="@Localizer["Id"]">
+                            <option>@Localizer["Decreasing"]</option>
+                            <option>@Localizer["Growing"]</option>
+                        </optgroup>
+                        <optgroup label="@Localizer["Date"]">
+                            <option>@Localizer["Decreasing"]</option>
+                            <option>@Localizer["Growing"]</option>
+                        </optgroup>
+                        <optgroup label="@Localizer["Name"]">
+                            <option>@Localizer["Decreasing"]</option>
+                            <option>@Localizer["Growing"]</option>
+                        </optgroup>
+                        <optgroup label="@Localizer["Domain"]">
+                            <option>@Localizer["Decreasing"]</option>
+                            <option>@Localizer["Growing"]</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            <!--List start-->
+            <!--List Head start-->
+            <div class="row text-center bg-head-color">
+                <div class="col-1">@Localizer["Id"]</div>
+                <div class="col-2"> @Localizer["Name"]</div>
+                <div class="col-4">@Localizer["Domain"]</div>
+                <div class="col-2"> @Localizer["Online"]</div>
+                <div class="col-3">@Localizer["Last seen"]</div>
+            </div>
+            <!--List Head end-->
+            <div class="row text-center bg-head-color" id="botlist">
+
             </div>
         </div>
-        <!--List start-->
-        <!--List Head start-->
-        <div class="row text-center bg-head-color">
-            <div class="col-2">@Localizer["Id"]</div>
-            <div class="col-4">@Localizer["Domain"]</div>
-            <div class="col-3"> @Localizer["Online"]</div>
-            <div class="col-3">@Localizer["Last seen"]</div>
-        </div>
-        <!--List Head end-->
     </div>
-</div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        BotList();
+    });
+    function BotList() {
+        $.ajax({
+            type: 'GET',
+            url: '/List/BotList',
+            dataType: 'json',
+            success: function (data) {
+                
+            }
+        });
+    }
+</script>
+
 

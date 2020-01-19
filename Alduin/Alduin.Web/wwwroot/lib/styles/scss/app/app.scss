@@ -154,7 +154,7 @@ body {
     font-size: .9em;
     padding: 5px 10px;
 }
-.invitation-board {
+.medium-board {
     padding: 20px;
     margin: 20px;
     width: 750px;
@@ -221,10 +221,10 @@ body {
 .nobreak {
     white-space: nowrap;
 }
-.list-board {
+.wide-board {
     padding: 20px;
     margin: 20px;
-    width: 750px;
+    width: 90%;
     border: $default-border;
     background-color: $menu-bg-color;
 

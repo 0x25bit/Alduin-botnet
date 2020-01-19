@@ -20,11 +20,5 @@ namespace Alduin.Web.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> BotList()
-        {
-            var query = new GetBotListQuery();
-            var bot = await _mediator.Send(query);
-            return Json(bot);
-        }
     }
 }
