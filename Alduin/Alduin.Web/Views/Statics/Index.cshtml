@@ -131,6 +131,12 @@
             type: 'GET',
             url: '/List/BotList',
             dataType: 'json',
+            beforeSend: function () {
+                $('#GeoMap').append("<div class='ajax-loading'></div>");
+            },
+            complete: function () {
+                $('.ajax-loading').remove();
+            },
             success: function (data) {
                 setMap(data);
                 BotStatus(data);

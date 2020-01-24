@@ -1,72 +1,167 @@
 ﻿
 @{
-    ViewData["Title"] = "List";
+    ViewData["Title"] = Localizer["List"];
 }
-    <div class="container d-flex justify-content-center">
-        <div class="wide-board">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1 class="text-center">@Localizer["List"]</h1>
-                    <hr />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3"> 
-                    <div class="form-check">
-                        <label>@Localizer["Just online"] ?</label>
-                        <input type="checkbox" class="form-check-label">
-                    </div>
-                </div>
-                <div class="col-6">
-                    <select>
-                        <optgroup label="@Localizer["Id"]">
-                            <option>@Localizer["Decreasing"]</option>
-                            <option>@Localizer["Growing"]</option>
-                        </optgroup>
-                        <optgroup label="@Localizer["Date"]">
-                            <option>@Localizer["Decreasing"]</option>
-                            <option>@Localizer["Growing"]</option>
-                        </optgroup>
-                        <optgroup label="@Localizer["Name"]">
-                            <option>@Localizer["Decreasing"]</option>
-                            <option>@Localizer["Growing"]</option>
-                        </optgroup>
-                        <optgroup label="@Localizer["Domain"]">
-                            <option>@Localizer["Decreasing"]</option>
-                            <option>@Localizer["Growing"]</option>
-                        </optgroup>
-                    </select>
-                </div>
-            </div>
-            <!--List start-->
-            <!--List Head start-->
-            <div class="row text-center bg-head-color">
-                <div class="col-1">@Localizer["Id"]</div>
-                <div class="col-2"> @Localizer["Name"]</div>
-                <div class="col-4">@Localizer["Domain"]</div>
-                <div class="col-2"> @Localizer["Online"]</div>
-                <div class="col-3">@Localizer["Last seen"]</div>
-            </div>
-            <!--List Head end-->
-            <div class="row text-center bg-head-color" id="botlist">
-
+<div class="container d-flex justify-content-center">
+    <div class="wide-board">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="text-center">@Localizer["List"]</h1>
+                <hr />
             </div>
         </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="form-check">
+                    <label>@Localizer["Just online"] ?</label>
+                    <input type="checkbox" id="status" class="form-check-label">
+                </div>
+            </div>
+            <div class="col-6">
+                @Localizer["Sorting"]:
+                <select id="sorter" class="listing-select">
+                    <optgroup label="@Localizer["Id"]">
+                        <option value="id-sort-normal">@Localizer["Decreasing"]</option>
+                        <option value="id-sort-desc">@Localizer["Growing"]</option>
+                    </optgroup>
+                    <optgroup label="@Localizer["Date"]">
+                        <option value="date-sort-normal">@Localizer["Decreasing"]</option>
+                        <option value="date-sort-desc">@Localizer["Growing"]</option>
+                    </optgroup>
+                    <optgroup label="@Localizer["Name"]">
+                        <option value="name-sort-normal">@Localizer["Decreasing"]</option>
+                        <option value="name-sort-desc">@Localizer["Growing"]</option>
+                    </optgroup>
+                    <optgroup label="@Localizer["Domain"]">
+                        <option value="domain-sort-normal">@Localizer["Decreasing"]</option>
+                        <option value="domain-sort-desc">@Localizer["Growing"]</option>
+                    </optgroup>
+                    <optgroup label="@Localizer["Country"]">
+                        <option value="country-sort-normal">@Localizer["Decreasing"]</option>
+                        <option value="country-sort-desc">@Localizer["Growing"]</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+        <!--List start-->
+        <!--List Head start-->
+        <div class="row text-center bg-head-color mb-2 font-weight-bold">
+            <div class="col-1">@Localizer["Id"]</div>
+            <div class="col-2"> @Localizer["Name"]</div>
+            <div class="col-3">@Localizer["Domain"]</div>
+            <div class="col-1">@Localizer["Country"]</div>
+            <div class="col-2"> @Localizer["Online"]</div>
+            <div class="col-3">@Localizer["Last seen"]</div>
+        </div>
+        <!--List Head end-->
+        <div class="row text-center" id="botlist">
+
+        </div>
     </div>
+</div>
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script>
+    var yes = '@Localizer["Yes"]';
+    var no = '@Localizer["No"]';
+    var ListArray = [];
     $(document).ready(function () {
         BotList();
     });
+    function addMinutes(date, minutes) {
+        return new Date(date.getTime() + minutes * 60000);
+    }
     function BotList() {
         $.ajax({
             type: 'GET',
             url: '/List/BotList',
             dataType: 'json',
+            beforeSend: function () {
+                $('#botlist').append("<div class='ajax-loading'></div>");
+            },
+            complete: function () {
+                $('.ajax-loading').remove();
+            },
             success: function (data) {
-                
+                for (var i = 0; i < data.length; i++) {
+                    if (addMinutes(new Date(data[i].lastLoggedInUTC), 5) > Date.now()) {
+                        var status = yes;
+                    } else {
+                        var status = no;
+                    }
+                    ListArray[i] = {
+                        Id: data[i].id,
+                        Name: data[i].userName,
+                        Domain: data[i].domain,
+                        Country: data[i].countryCode,
+                        LastLogin: new Date(data[i].lastLoggedInUTC).toLocaleString('en-US', { weekday: 'short' }) + " " + new Date(data[i].lastLoggedInUTC).toLocaleString(),
+                        Online: status
+                    };
+                }
+                listing();
             }
         });
+    }
+    $("#sorter").click(function () {
+        switch ($(this).val()) {
+            case "id-sort-normal":
+                ListArray.sort((a, b) => (a.Id > b.Id) ? 1 : -1);
+                break;
+            case "id-sort-desc":
+                ListArray.sort((a, b) => (a.Id > b.Id) ? -1 : 1);
+                break;
+            case "date-sort-normal":
+                ListArray.sort((a, b) => (a.LastLogin > b.LastLogin) ? 1 : -1);
+                break;
+            case "date-sort-desc":
+                ListArray.sort((a, b) => (a.LastLogin > b.LastLogin) ? -1 : 1);
+                break;
+            case "name-sort-normal":
+                ListArray.sort((a, b) => (a.Name > b.Name) ? 1 : -1);
+                break;
+            case "name-sort-desc":
+                ListArray.sort((a, b) => (a.Name > b.Name) ? -1 : 1);
+                break;
+            case "domain-sort-normal":
+                ListArray.sort((a, b) => (a.Domain > b.Domain) ? 1 : -1);
+                break;
+            case "domain-sort-desc":
+                ListArray.sort((a, b) => (a.Domain > b.Domain) ? -1 : 1);
+                break;
+            case "country-sort-normal":
+                ListArray.sort((a, b) => (a.Country > b.Country) ? 1 : -1);
+                break;
+            case "country-sort-desc":
+                ListArray.sort((a, b) => (a.Country > b.Country) ? -1 : 1);
+                break;
+        }
+        listing();
+    });
+    function listing() {
+        $("#botlist").text("");
+        for (var i = 0; i < ListArray.length; i++) {
+            if ($("#status").prop("checked")) {
+                if (ListArray[i].Online == yes) {
+                    $("#botlist").append(
+                        "<div class='col-1 list-line'>" + ListArray[i].Id + "</div>" +
+                        "<div class='col-2 list-line'>" + ListArray[i].Name + "</div>" +
+                        "<div class='col-3 list-line'>" + ListArray[i].Domain + "</div>" +
+                        "<div class='col-1 list-line'>" + ListArray[i].Country + "</div>" +
+                        "<div class='col-2 list-line'>" + ListArray[i].Online + "</div>" +
+                        "<div class='col-3 list-line'>" + ListArray[i].LastLogin + "</div>"
+                    );
+                }
+
+            } else {
+                $("#botlist").append(
+                    "<div class='col-1 list-line'>" + ListArray[i].Id + "</div>" +
+                    "<div class='col-2 list-line'>" + ListArray[i].Name + "</div>" +
+                    "<div class='col-3 list-line'>" + ListArray[i].Domain + "</div>" +
+                    "<div class='col-1 list-line'>" + ListArray[i].Country + "</div>" +
+                    "<div class='col-2 list-line'>" + ListArray[i].Online + "</div>" +
+                    "<div class='col-3 list-line'>" + ListArray[i].LastLogin + "</div>"
+                );
+            }
+        }
     }
 </script>
 

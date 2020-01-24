@@ -12,6 +12,7 @@ $head-color: rgb(21, 159, 190);
 $font-family: 'Roboto', sans-serif;
 $default-border: 1px solid $menu-bd-color;
 $invitation-border: 2px solid white;
+$border-left: 3px solid $active-color;
 $break-small: 768px;
 $break-large: 1200px;
 
@@ -88,6 +89,7 @@ body {
 
     &:hover {
         background-color: $menu-hv-color;
+        border-left: $border-left;
     }
 }
 .menu-row-content{
@@ -105,7 +107,8 @@ body {
     border-radius: 5px;
 }
 .active{
-  color: $active-color;
+  color: $active-color !important;
+  border-left: $border-left;
 }
 .logo {
     width: 10%;
@@ -196,6 +199,10 @@ body {
         font-weight: bold;
     }
 }
+.listing-select{
+    @extend .command-select;
+    width: 150px;
+}
 .mini-menu {
     transition: .2s;
     overflow: hidden;
@@ -248,13 +255,33 @@ body {
     background-color: $head-color;
 }
 .ajax-loading {
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
     margin-left: auto;
     margin-right: auto;
-    background-image: url("/img/Gifs/ajax-loader.gif");
+    background-color: White;
     background-repeat: no-repeat;
     background-size: 100%;
+    animation: loading 3s infinite;
+    animation-timing-function: ease-in-out;
+
+    @keyframes loading {
+        0% {
+            background-color: rgb(21, 159, 190);
+            transform: rotate(0deg);
+        }
+
+        75% {
+            background-color: #911949;
+            transform: rotate(-360deg);
+        }
+
+        100% {
+            background-color: rgb(21, 159, 190);
+            transform: rotate(0deg);
+        }
+    }
 }
 .Large-chart{
     width: 100%;
@@ -264,4 +291,7 @@ body {
     width: 80%;
     height: 80%;
     color: white;
+}
+.list-line{
+    padding: 10px 0px;
 }

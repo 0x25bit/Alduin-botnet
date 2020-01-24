@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Country" xml:space="preserve">
+    <value>Ország</value>
+  </data>
   <data name="Date" xml:space="preserve">
     <value>Dátum</value>
   </data>
@@ -144,7 +147,16 @@
   <data name="Name" xml:space="preserve">
     <value>Név</value>
   </data>
+  <data name="No" xml:space="preserve">
+    <value>Nem</value>
+  </data>
   <data name="Online" xml:space="preserve">
     <value>Elérhető</value>
+  </data>
+  <data name="Sorting" xml:space="preserve">
+    <value>Válogatás</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Igen</value>
   </data>
 </root>

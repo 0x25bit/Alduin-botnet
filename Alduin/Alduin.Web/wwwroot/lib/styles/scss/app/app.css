@@ -56,7 +56,8 @@ body {
 .menu-row {
   transition: .3s; }
   .menu-row:hover {
-    background-color: rgba(21, 159, 190, 0.5); }
+    background-color: rgba(21, 159, 190, 0.5);
+    border-left: 3px solid #15A0BF; }
 
 .menu-row-content {
   padding: 5px 15px; }
@@ -72,7 +73,8 @@ body {
   border-radius: 5px; }
 
 .active {
-  color: #15A0BF; }
+  color: #15A0BF !important;
+  border-left: 3px solid #15A0BF; }
 
 .logo {
   width: 10%; }
@@ -132,20 +134,23 @@ body {
       border: 1px solid #131418;
       text-align: center; }
 
-.command-select {
+.command-select, .listing-select {
   width: 100%;
   background-color: #15A0BF;
   color: #d4d6d9;
   padding: 5px 10px;
   border: 1px solid #131418; }
-  .command-select option {
+  .command-select option, .listing-select option {
     font-size: 1.1em;
     color: #d4d6d9;
     padding: 2px;
     border: 1px solid #131418; }
-  .command-select optgroup {
+  .command-select optgroup, .listing-select optgroup {
     color: #d4d6d9 !important;
     font-weight: bold; }
+
+.listing-select {
+  width: 150px; }
 
 .mini-menu {
   transition: .2s;
@@ -189,13 +194,27 @@ body {
   background-color: #159fbe; }
 
 .ajax-loading {
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
+  border: 2px solid black;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("/img/Gifs/ajax-loader.gif");
+  background-color: White;
   background-repeat: no-repeat;
-  background-size: 100%; }
+  background-size: 100%;
+  animation: loading 3s infinite;
+  animation-timing-function: ease-in-out; }
+
+@keyframes loading {
+  0% {
+    background-color: #159fbe;
+    transform: rotate(0deg); }
+  75% {
+    background-color: #911949;
+    transform: rotate(-360deg); }
+  100% {
+    background-color: #159fbe;
+    transform: rotate(0deg); } }
 
 .Large-chart {
   width: 100%;
@@ -205,3 +224,6 @@ body {
   width: 80%;
   height: 80%;
   color: white; }
+
+.list-line {
+  padding: 10px 0px; }
