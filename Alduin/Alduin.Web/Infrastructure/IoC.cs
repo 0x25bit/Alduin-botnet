@@ -49,13 +49,14 @@ namespace Alduin.Web.Infrastructure
             services.AddScoped<IUserClaimManager, UserClaimManager>();
             services.AddScoped<IBotManager, BotManager>();
             services.AddScoped<IInvitationManager, InvitationManager>();
-
+            services.AddScoped<IBotInfoManager, BotInfoManager>();
             // Repositories
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserClaimRepository, UserClaimRepository>();
             services.AddScoped<IBotRepository, BotRepository>();
             services.AddScoped<IInvitationRepository, InvitationRepository>();
+            services.AddScoped<IBotInfoRepository, BotInfoRepository>();
         }
         private static void SetupTransient(IServiceCollection services)
         {

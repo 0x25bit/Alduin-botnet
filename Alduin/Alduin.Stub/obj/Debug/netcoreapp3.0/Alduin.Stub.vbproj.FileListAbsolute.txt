@@ -1,0 +1,11 @@
+E:\project\Alduin-botnet\Alduin\Alduin.Stub\bin\Debug\netcoreapp3.0\Alduin.Stub.exe
+E:\project\Alduin-botnet\Alduin\Alduin.Stub\bin\Debug\netcoreapp3.0\Alduin.Stub.deps.json
+E:\project\Alduin-botnet\Alduin\Alduin.Stub\bin\Debug\netcoreapp3.0\Alduin.Stub.runtimeconfig.json
+E:\project\Alduin-botnet\Alduin\Alduin.Stub\bin\Debug\netcoreapp3.0\Alduin.Stub.runtimeconfig.dev.json
+E:\project\Alduin-botnet\Alduin\Alduin.Stub\bin\Debug\netcoreapp3.0\Alduin.Stub.dll
+E:\project\Alduin-botnet\Alduin\Alduin.Stub\bin\Debug\netcoreapp3.0\Alduin.Stub.pdb
+E:\project\Alduin-botnet\Alduin\Alduin.Stub\obj\Debug\netcoreapp3.0\Alduin.Stub.vbprojAssemblyReference.cache
+E:\project\Alduin-botnet\Alduin\Alduin.Stub\obj\Debug\netcoreapp3.0\Alduin.Stub.AssemblyInfoInputs.cache
+E:\project\Alduin-botnet\Alduin\Alduin.Stub\obj\Debug\netcoreapp3.0\Alduin.Stub.AssemblyInfo.vb
+E:\project\Alduin-botnet\Alduin\Alduin.Stub\obj\Debug\netcoreapp3.0\Alduin.Stub.dll
+E:\project\Alduin-botnet\Alduin\Alduin.Stub\obj\Debug\netcoreapp3.0\Alduin.Stub.pdb
