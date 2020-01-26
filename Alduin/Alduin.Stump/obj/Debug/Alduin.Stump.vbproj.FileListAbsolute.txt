@@ -1,0 +1,13 @@
+E:\project\Alduin-botnet\Alduin\Alduin.Stump\bin\Debug\Alduin.Stump.exe.config
+E:\project\Alduin-botnet\Alduin\Alduin.Stump\bin\Debug\Alduin.Stump.exe
+E:\project\Alduin-botnet\Alduin\Alduin.Stump\bin\Debug\Alduin.Stump.pdb
+E:\project\Alduin-botnet\Alduin\Alduin.Stump\bin\Debug\Alduin.Stump.xml
+E:\project\Alduin-botnet\Alduin\Alduin.Stump\bin\Debug\Org.Mentalis.dll
+E:\project\Alduin-botnet\Alduin\Alduin.Stump\bin\Debug\SocksWebProxy.dll
+E:\project\Alduin-botnet\Alduin\Alduin.Stump\obj\Debug\Alduin.Stump.vbprojAssemblyReference.cache
+E:\project\Alduin-botnet\Alduin\Alduin.Stump\obj\Debug\Alduin.Stump.Resources.resources
+E:\project\Alduin-botnet\Alduin\Alduin.Stump\obj\Debug\Alduin.Stump.vbproj.GenerateResource.cache
+E:\project\Alduin-botnet\Alduin\Alduin.Stump\obj\Debug\Alduin.Stump.vbproj.CopyComplete
+E:\project\Alduin-botnet\Alduin\Alduin.Stump\obj\Debug\Alduin.Stump.exe
+E:\project\Alduin-botnet\Alduin\Alduin.Stump\obj\Debug\Alduin.Stump.xml
+E:\project\Alduin-botnet\Alduin\Alduin.Stump\obj\Debug\Alduin.Stump.pdb

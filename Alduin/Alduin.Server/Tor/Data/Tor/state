@@ -1,0 +1,34 @@
+# Tor state file last generated on 2019-03-06 12:45:58 local time
+# Other times below are in UTC
+# You *do not* need to edit this file.
+
+Guard in=default rsa_id=7E8BC43AE75EAE16D7EC4676F4A5C355F454B809 nickname=minotorus sampled_on=2019-02-23T12:38:06 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=BF0FB582E37F738CD33C3651125F2772705BB8E8 nickname=quadhead sampled_on=2019-03-02T03:17:40 sampled_by=0.3.5.7 listed=1 confirmed_on=2019-03-04T16:02:58 confirmed_idx=1
+Guard in=default rsa_id=E0EAA536856FBD3C3AB46C2BAA398E7CDFDAFF5D nickname=as44194a36s01 sampled_on=2019-02-24T17:34:05 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=12D552E8AF7AA2B71B218B5BBF6A5FEFA6F26BA0 nickname=TOR2DFNrelA sampled_on=2019-02-22T16:22:54 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=576E740D6D816BECC81B94EE74B6A6FA2917FAD4 nickname=Torfall sampled_on=2019-03-02T01:52:42 sampled_by=0.3.5.7 listed=1 confirmed_on=2019-02-28T02:10:42 confirmed_idx=2
+Guard in=default rsa_id=F5FBBE191A8B46E6F5C0909214F46DB8D74C9F97 nickname=TRelay sampled_on=2019-02-25T23:19:22 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=667443EFB6EA82FB903697377132518CE2FE45E8 nickname=innotorlife sampled_on=2019-03-03T13:19:53 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=3F65766ADE067D9D08920E3B74DAB9040EDD26B2 nickname=Eyjafjallajoekull sampled_on=2019-03-04T01:42:19 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=D27208881BBDB5EA56EFD1D1799187519591E325 nickname=niftytelicomys sampled_on=2019-03-01T22:46:28 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=13A883871EF7BA0CB7C913534C5EC360D6DF1BF7 nickname=Unnamed sampled_on=2019-03-03T14:44:59 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=0095792CC00758F245795556C957C20A3FF7E1BE nickname=baryon sampled_on=2019-03-06T11:29:46 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=24E1C6412183972BFD76D838AC04D1ED261743D3 nickname=niftymastomys sampled_on=2019-03-01T09:36:42 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=ECEB6D5625DBADC146B48253C2DC35CCD58DE07B nickname=Zeta sampled_on=2019-03-05T08:46:15 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=2F9A6B5ADBE91EC69F55AAFB7DC49619D31B8324 nickname=0x3d003 sampled_on=2019-03-02T03:28:30 sampled_by=0.3.5.7 listed=1 confirmed_on=2019-02-27T15:53:52 confirmed_idx=0 pb_use_attempts=2.000000 pb_use_successes=2.000000 pb_circ_attempts=14.000000 pb_circ_successes=14.000000 pb_successful_circuits_closed=14.000000
+Guard in=default rsa_id=F0F5074A6DADD3DC22E1FAA18FD6D89CBC52771A nickname=dc6jgk7b sampled_on=2019-03-03T00:52:08 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=F15F5BBB91175B81980FD0704F1762C04CF6AF1E nickname=chungus sampled_on=2019-03-04T23:33:15 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=34DF8443F6ACD1A543AAA10A7621A389E31A4422 nickname=livia sampled_on=2019-03-02T01:26:31 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=33129060A096700BEB20F0AC476767C16070E5B8 nickname=Hydra4 sampled_on=2019-03-02T04:58:42 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=5AD4E3F36B803500AE5A724ACD4A3BCCE3BEFA14 nickname=EvilMoe sampled_on=2019-03-01T04:02:38 sampled_by=0.3.5.7 listed=1
+Guard in=default rsa_id=9B3E7A0AD9A054984CC87E7CA9D5C117202D45D4 nickname=scaletoer sampled_on=2019-03-01T04:38:05 sampled_by=0.3.5.7 listed=1
+TorVersion Tor 0.3.5.7 (git-9beb085c10562a25)
+LastWritten 2019-03-06 12:45:58
+TotalBuildTimes 14
+CircuitBuildTimeBin 225 3
+CircuitBuildTimeBin 275 3
+CircuitBuildTimeBin 325 3
+CircuitBuildTimeBin 375 1
+CircuitBuildTimeBin 425 2
+CircuitBuildTimeBin 475 1
+CircuitBuildTimeBin 525 1

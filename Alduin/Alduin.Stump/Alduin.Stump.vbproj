@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{69635829-576F-439D-AA64-45668B9328D3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>Alduin.Stump.Module1</StartupObject>
+    <StartupObject>Alduin.Stump.Main</StartupObject>
     <RootNamespace>Alduin.Stump</RootNamespace>
     <AssemblyName>Alduin.Stump</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -48,6 +48,12 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Org.Mentalis">
+      <HintPath>C:\Users\Mate\source\repos\ModuleConnect\ModuleConnect\bin\Debug\Org.Mentalis.dll</HintPath>
+    </Reference>
+    <Reference Include="SocksWebProxy">
+      <HintPath>C:\Users\Mate\source\repos\ModuleConnect\ModuleConnect\bin\Debug\SocksWebProxy.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -69,7 +75,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
+    <Compile Include="Main.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -105,6 +111,156 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="Tor\cached-certs" />
+    <None Include="Tor\cached-consensus" />
+    <None Include="Tor\cached-descriptors" />
+    <None Include="Tor\cached-descriptors.new" />
+    <None Include="Tor\cached-microdesc-consensus" />
+    <None Include="Tor\cached-microdescs" />
+    <None Include="Tor\cached-microdescs.new" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\safebrowsing\test-block-simple.pset" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\safebrowsing\test-block-simple.sbstore" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\safebrowsing\test-harmful-simple.pset" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\safebrowsing\test-harmful-simple.sbstore" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\safebrowsing\test-malware-simple.pset" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\safebrowsing\test-malware-simple.sbstore" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\safebrowsing\test-phish-simple.pset" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\safebrowsing\test-phish-simple.sbstore" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\safebrowsing\test-track-simple.pset" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\safebrowsing\test-track-simple.sbstore" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\safebrowsing\test-trackwhite-simple.pset" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\safebrowsing\test-trackwhite-simple.sbstore" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\safebrowsing\test-unwanted-simple.pset" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\safebrowsing\test-unwanted-simple.sbstore" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\startupCache\scriptCache-child.bin" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\startupCache\scriptCache.bin" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\startupCache\startupCache.8.little" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\startupCache\urlCache.bin" />
+    <None Include="Tor\Data\Browser\Caches\profile.default\startupCache\webext.sc.lz4" />
+    <None Include="Tor\Data\Browser\profile.default\addonStartup.json.lz4" />
+    <None Include="Tor\Data\Browser\profile.default\compatibility.ini" />
+    <None Include="Tor\Data\Browser\profile.default\containers.json" />
+    <None Include="Tor\Data\Browser\profile.default\content-prefs.sqlite" />
+    <None Include="Tor\Data\Browser\profile.default\cookies.sqlite" />
+    <None Include="Tor\Data\Browser\profile.default\extensions.json" />
+    <None Include="Tor\Data\Browser\profile.default\extensions\https-everywhere-eff%40eff.org.xpi" />
+    <None Include="Tor\Data\Browser\profile.default\extensions\tor-launcher%40torproject.org.xpi" />
+    <None Include="Tor\Data\Browser\profile.default\extensions\torbutton%40torproject.org.xpi" />
+    <None Include="Tor\Data\Browser\profile.default\extensions\{73a6fe31-595d-460b-a920-fcc0f8843232}.xpi" />
+    <None Include="Tor\Data\Browser\profile.default\favicons.sqlite" />
+    <None Include="Tor\Data\Browser\profile.default\handlers.json" />
+    <None Include="Tor\Data\Browser\profile.default\parent.lock" />
+    <None Include="Tor\Data\Browser\profile.default\places.sqlite" />
+    <None Include="Tor\Data\Browser\profile.default\search.json.mozlz4" />
+    <None Include="Tor\Data\Browser\profile.default\sessionCheckpoints.json" />
+    <None Include="Tor\Data\Browser\profile.default\storage-sync.sqlite" />
+    <None Include="Tor\Data\Browser\profile.default\storage.sqlite" />
+    <None Include="Tor\Data\Browser\profile.default\storage\permanent\chrome\.metadata" />
+    <None Include="Tor\Data\Browser\profile.default\storage\permanent\chrome\.metadata-v2" />
+    <None Include="Tor\Data\Browser\profile.default\storage\permanent\chrome\idb\3561288849sdhlie.sqlite" />
+    <None Include="Tor\Data\Browser\profile.default\times.json" />
+    <None Include="Tor\Data\Browser\profile.default\webappsstore.sqlite" />
+    <None Include="Tor\Data\Browser\profile.default\xulstore.json" />
+    <None Include="Tor\Data\Browser\profile.meek-http-helper\extensions\meek-http-helper%40bamsoftware.com.xpi" />
+    <None Include="Tor\Data\Browser\profiles.ini" />
+    <None Include="Tor\Data\Tor\cached-certs" />
+    <None Include="Tor\Data\Tor\cached-microdesc-consensus" />
+    <None Include="Tor\Data\Tor\cached-microdescs" />
+    <None Include="Tor\Data\Tor\cached-microdescs.new" />
+    <None Include="Tor\Data\Tor\geoip" />
+    <None Include="Tor\Data\Tor\geoip6" />
+    <None Include="Tor\Data\Tor\lock" />
+    <None Include="Tor\Data\Tor\state" />
+    <None Include="Tor\Data\Tor\torrc" />
+    <None Include="Tor\Data\Tor\torrc.orig.1" />
+    <None Include="Tor\geoip" />
+    <None Include="Tor\geoip6" />
+    <None Include="Tor\lock" />
+    <None Include="Tor\state" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\Data\Browser\profile.default\browser-extension-data\{73a6fe31-595d-460b-a920-fcc0f8843232}\storage.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\Data\Browser\profile.default\browser-extension-data\https-everywhere-eff%40eff.org\storage.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\Data\Browser\profile.default\AlternateServices.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\Data\Browser\profile.default\blocklist.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\Data\Browser\profile.default\bookmarks.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\Data\Browser\profile.default\prefs.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\Data\Browser\profile.default\SecurityPreloadState.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\Data\Browser\profile.default\SiteSecurityServiceState.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\Data\Browser\profile.default\TRRBlacklist.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\Data\Browser\profile.meek-http-helper\user.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\PluggableTransports\meek-client.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\PluggableTransports\meek-client-torbrowser.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\PluggableTransports\obfs4proxy.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\PluggableTransports\terminateprocess-buffer.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\libeay32.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\libevent_core-2-0-5.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\libevent_core-2-1-6.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\libevent_extra-2-0-5.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\libevent_extra-2-1-6.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\libevent-2-0-5.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\libevent-2-1-6.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\libgcc_s_seh-1.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\libgcc_s_sjlj-1.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\libssp-0.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\libwinpthread-1.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\ssleay32.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\tor.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tor\zlib1.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alduin.TestDatabaseCreator"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Alduin.Stump", "Alduin.Stump\Alduin.Stump.vbproj", "{69635829-576F-439D-AA64-45668B9328D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alduin.Server", "Alduin.Server\Alduin.Server.csproj", "{66951BBA-F913-4310-91DC-166AB1920724}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{69635829-576F-439D-AA64-45668B9328D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69635829-576F-439D-AA64-45668B9328D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69635829-576F-439D-AA64-45668B9328D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66951BBA-F913-4310-91DC-166AB1920724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66951BBA-F913-4310-91DC-166AB1920724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66951BBA-F913-4310-91DC-166AB1920724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66951BBA-F913-4310-91DC-166AB1920724}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
